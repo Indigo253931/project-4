@@ -35,16 +35,6 @@ Unit #4 Project: Portfolio Project
     'image' : 'String'
 }
 
-
-
-'User': 
-{
-    'username' : 'Monica',
-    'email' : 'Monica@test.com',
-    'password' : 'password'
-    'location' : 'Denver, CO',
-    'avatar' : 'String'
-}
  
 2015 - 2016 Top Contributers
 
@@ -79,6 +69,8 @@ User can CRUD product data
         -CSS
         -Bootstrap
         -Angular
+        -Bower
+        -Passport
 
     ### Unsolved problems 
 
@@ -93,6 +85,11 @@ https://trello.com/b/31kST3qY/project-4
 /////////////////////////////
 //      Wireframes
 /////////////////////////////
+
+<img src='Home.png'/>
+<img src='Sign_Up.png'/>
+<img src='Login.png'/>
+<img src=''/>
 
 /////////////////////////////
 //      Pitch Deck
