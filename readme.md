@@ -1,5 +1,7 @@
 Unit #4 Project: Portfolio Project
 
+-
+
                        
                     /////////////////////////////
                     //       About
@@ -28,11 +30,17 @@ Unit #4 Project: Portfolio Project
   
 'Product' 
 {
-    'sector' : 'String',
+    'name' :
+    sector' : 'String',
     'industry' : 'String',
-    'name' : 'String',
+    'company_name' : 'String',
     'description' : 'String',
     'image' : 'String'
+}
+
+'sector_industry' 
+{
+    'sector' : ['']
 }
 
  
@@ -88,7 +96,7 @@ https://trello.com/b/31kST3qY/project-4
 
 <h2>Home</h2><img class='wireframes' src='Wireframes/Home.png'/><br>
 <h2>About</h2><img class='wireframes' src='Wireframes/About.png'/><br>
-<h2>Sign Up</h2><img class='wireframes' src='Wireframes/Sign_Up.png'/><br>
+<h2>Sign Up</h2><img class='wireframes' src='Wireframes/SignUp.png'/><br>
 <h2>Login</h2><img class='wireframes' src='Wireframes/Login.png'/><br>
 <h2>New product</h2><img class='wireframes' src='Wireframes/newProduct.png'/><br>
 <h2>All products</h2><img class='wireframes' src='Wireframes/indexProduct.png'/><br>
