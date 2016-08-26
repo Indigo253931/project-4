@@ -178,7 +178,7 @@ Use NPM to require Express:
 
 Require Mongoose in server.js
 
-Use directives ngApp, ngView and ngRepeat
+Use directives ngApp, ngView, ngController and ngRepeat
 
 
 ### Technical Requirements
