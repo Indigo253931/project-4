@@ -30,17 +30,17 @@ Unit #4 Project: Portfolio Project
   
 'Product' 
 {
-    'name' :
+    'product_name' :
     sector' : 'String',
     'industry' : 'String',
     'company_name' : 'String',
-    'description' : 'String',
+    'comments' : ['String'],
     'image' : 'String'
 }
 
 'sector_industry' 
 {
-    'sector' : ['']
+    'sector1' : ['industry1', 'industry2', 'industry3']
 }
 
  
