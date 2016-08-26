@@ -138,7 +138,6 @@ Technical trello cards:
         -Touch routes.js
 
 
-
 -Touch server.js and require mongoose.
     -Require and use express.
     -Require and use body parser.
