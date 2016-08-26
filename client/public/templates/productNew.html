@@ -1,0 +1,31 @@
+<!-- Register a controller for section of application. -->
+			<form id='activity-form' ng-controller="ProductsController as productCtrl" ng-submit="submit()">
+				<!-- Name input -->
+				<table style='width:100%''>
+					<div class='form labels'>
+						<label for="newProduct-name">Name:</label>
+						<!-- Bind HTML element's value to model. -->
+						<input id='form-label-name' type="text" id="newProduct-name" ng-model="newProduct.name" placeholder=''>
+					</div></tr>
+					<!-- Kind input -->
+					<tr><div class='form labels'>
+						<label for="newStrain-kind">Kind:</label>
+						<input type="text" id="newStrain-kind" ng-model="newStrain.kind" placeholder="Sativa">
+					</div></tr>
+					<!-- Activity input -->
+					<tr><div class='form labels'>
+						<label for="newStrain-activity">Activity:</label>
+						<input type="text" id="newStrain-activity" ng-model="newStrain.activity" placeholder="Hiking">
+					</div></tr>
+					<!-- Description input -->
+					<tr><div class='form labels'>
+						<label for="newStrain-description">Description:</label>
+						<input type="text" id="newStrain-description" ng-model="newStrain.description" placeholder="The best strain for hiking in the Rocky Mountains!">
+					</div></tr>
+					<!-- Submit form -->
+					<div>
+						<button type='button' ngClick='submit-form'>
+							<input type="submit" value="Create a pairing reccomendation">Submit</button>
+					</div>
+				</table>
+			</form>

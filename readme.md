@@ -43,24 +43,26 @@ Unit #4 Project: Portfolio Project
     'avatar' : 'String'
 }
    
-'Data' 
+'Product' 
 {
     'sector' : 'String',
-    'industry' : ['String'],
-    'product' : ['String'],
-    'information' : 'String'
+    'industry' : 'String',
+    'productname_' : 'String',
+    'description' : 'String'
 }
 
+2015 - 2016 Top Contributers
+
+Seeded data
 
 Sector: Agribusiness
-Industries: 
+Industries: ['Crop Production & Basic Processing', 'Tobacco', Dairy', 'Poultry & Eggs', 'Livestock', 'Agricultural Services & Products',  'Food Processing & Sales', 'Forestry & Forest Products']
+Top Contributer: 
+
 Sector: Energy & Natural Resources
 Industries: 
-Sector: Construction
-Industries: 
-Sector: Agribusiness
-Industries: 
- Health
+
+Sector: Health
 Industries:
 Products:
 
