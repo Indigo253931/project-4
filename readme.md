@@ -86,9 +86,9 @@ https://trello.com/b/31kST3qY/project-4
 //      Wireframes
 /////////////////////////////
 
-<img src='Home.png'/>
-<img src='Sign_Up.png'/>
-<img src='Login.png'/>
+<img src='/Eireframes/Home.png'/>
+<img src='Wireframes/Sign_Up.png'/>
+<img src='Wireframes/Login.png'/>
 <img src=''/>
 
 /////////////////////////////
