@@ -1,13 +1,15 @@
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-// var ProductSchema = new Schema({
-// 	username: String,
-// 	kind: String,
-// 	activity: [String],
-// 	description: String
-// });
+var ProductSchema = new Schema({
+	sector: String,
+	industry: String,
+	product_name: String,
+	company_name: String,
+	comments: [String],
+	image: String
+});
 
-// var Product = mongoose.model('Product', ProductSchema);
+var Product = mongoose.model('Product', ProductSchema);
 
-// module.exports = Product;
+module.exports = Product;
