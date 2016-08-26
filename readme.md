@@ -24,15 +24,18 @@ Unit #4 Project: Portfolio Project
     'location' : 'String',
     'avatar' : 'String'
 }
-   
+
+  
 'Product' 
 {
     'sector' : 'String',
     'industry' : 'String',
-    'product_name' : 'String',
-    'information' : 'String',
+    'name' : 'String',
+    'description' : 'String',
     'image' : 'String'
 }
+
+
 
 'User': 
 {
@@ -42,15 +45,7 @@ Unit #4 Project: Portfolio Project
     'location' : 'Denver, CO',
     'avatar' : 'String'
 }
-   
-'Product' 
-{
-    'sector' : 'String',
-    'industry' : 'String',
-    'productname_' : 'String',
-    'description' : 'String'
-}
-
+ 
 2015 - 2016 Top Contributers
 
 Seeded data
@@ -60,11 +55,7 @@ Industries: ['Crop Production & Basic Processing', 'Tobacco', Dairy', 'Poultry &
 Top Contributer: 
 
 Sector: Energy & Natural Resources
-Industries: 
-
-Sector: Health
-Industries:
-Products:
+Industries: ['Oil & Gas', 'Mining', 'Alternative Energy Production & Services', 'Electric Utilities', 'Waste Management']
 
 
 User can CRUD product data
@@ -111,37 +102,56 @@ https://trello.com/b/31kST3qY/project-4
 //      Workflow
 /////////////////////////////
 
-Create directories and files.
+Technical trello cards:
 
-    Client directory for front-end
 
-        Scripts directory
-            app.js
-            Controllers directory
-                strainDirective.js
-                strainController.js
 
-        Styles directory
-            style.css
+-Create client directory for front end.
 
-        Templates directory
-            strainIndex.html
-            strainShow.html
-            strainDirective.html
+    -Create public directory and touch index.html (this will be the homepage)
+
+            -Create a scripts directory and touch app.js.
             
-        index.html
+            -Create a styles directory and touch styles.css. Here you will add custom styling to your pages.      
+                -Create images directory to store app's images
+            
+           -Create templates directory and touch files needed for all views (productIndex.html, productShow.html, profile.html, about.html productNew.html, productUpdate.html, signUp.html, login.html)
+    
+ -Install technologies needed in public directory (Angular, Bower, Bootstrap and Passport) 
 
-    Server directory for back-end
+-Include bootstrap, styles.css, angular/bower and app.js in index.hmtl 
 
-        Controllers directory
-            strainsController.js
-        Models directory
-            index.js
-            strain.js
-        Routes directory
-            routes.js
+-Create server directory.
+-Install Node, Express and Mongo
+    -Add 'node_modules' to .gitignore file.
+    -Create models directory. 
+        -Touch index.js, product.js and user.js
+    -Create routes directory.
+        -Touch routes.js
 
-    server.js
+
+
+-Touch server.js and require mongoose.
+    -Require and use express.
+    -Require and use body parser.
+    -Requrie mongoose.
+    -Require models.
+    -Create empty array for products. 
+    -Create HTML endpoint for homepage.
+    -Create API routes.
+    -Create JSON endpoints to get all products, get one product by id, create a product, edit a product and delete a product.
+    -Set up server to listen on port 3000.
+
+-Touch seed.js. 
+    -Require models in db variable. 
+    -Include seeded data array for products.
+
+    
+
+
+
+
+
 
 
 Install Bower for front-end dependencies 
