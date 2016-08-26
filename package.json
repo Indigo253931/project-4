@@ -1,0 +1,24 @@
+{
+  "name": "project-4",
+  "version": "1.0.0",
+  "description": "Unit #4 Project: Portfolio Project",
+  "main": "seed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Indigo253931/project-4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Indigo253931/project-4/issues"
+  },
+  "homepage": "https://github.com/Indigo253931/project-4#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
