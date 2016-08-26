@@ -86,11 +86,12 @@ https://trello.com/b/31kST3qY/project-4
 //      Wireframes
 /////////////////////////////
 
-<img src='/Eireframes/Home.png'/>
-<img src='Wireframes/Sign_Up.png'/>
-<img src='Wireframes/Login.png'/>
-<img src=''/>
-
+<img class='wireframes' src='Wireframes/Home.png'/>
+<br>
+<img class='wireframes' src='Wireframes/Sign_Up.png'/>
+<br>
+<img class='wireframes' src='Wireframes/Login.png'/>
+<br>
 /////////////////////////////
 //      Pitch Deck
 /////////////////////////////
