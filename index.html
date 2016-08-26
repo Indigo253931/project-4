@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EcoViews</title>
+</head>
+
+<body>
+
+	<div>
+	<!-- Seed Data -->
+	<h1>Top Contributors, 2015-2016</h1>
+
+		<h1>Sector: Agribusiness</h1>
+			
+			<h2>Industry: Tobacco</h2>
+
+					Contributor					Amount
+				<ol>
+					<li>Altria Group	 		$1,160,322</li>
+					<li>Reynolds American	 	$430,055</li>
+					<li>Swisher International	$207,100</li>
+				</ol>
+
+				<h2>Industry: Dairy</h2>
+
+						Contributor					Amount
+					<ol>
+						<li>Altria Group	 		$1,160,322</li>
+						<li>Reynolds American	 	$430,055</li>
+						<li>Swisher International	$207,100</li>
+					</ol>
+
+				<h2>Industry: Poultry</h2>
+
+						Contributor					Amount
+					<ol>
+						<li>Altria Group	 		$1,160,322</li>
+						<li>Reynolds American	 	$430,055</li>
+						<li>Swisher International	$207,100</li>
+					</ol>
+
+
+				<h2>Industry: Livestock</h2>
+
+						Contributor					Amount
+					<ol>
+						<li>Altria Group	 		$1,160,322</li>
+						<li>Reynolds American	 	$430,055</li>
+						<li>Swisher International	$207,100</li>
+					</ol>
+
+				
+
+				<h2>Industry: Food Processing & Sales Industry</h2>
+
+					Contributor							Amount
+				<ol>
+					<li>Publix Super Markets 			$939,445</li>
+					<li>Castellini Group of Companies	$619,183</li>
+					<li>Reyes Holdings  				$605,755</li>
+				</ol>
+
+					<h3>Sub-Industry: Meat Processing & Products</h3>
+
+							Contributor					Amount
+						<ol>
+							<li>Tyson Foods	 			$180,287</li>
+							<li>Premio Foods	 		$115,400</li>
+							<li>Boar's Head Provisions	$106,900</li>
+						</ol>
+
+				<h2>Industry: Forestry & Forest Products</h2>
+
+					Contributor							Amount
+				<ol>
+					<li>International Paper	 			$847,609</li>
+					<li>American Forest & Paper Assn	$319,100</li>
+					<li>Weyerhaeuser Co	 				$315,390</li>
+				</ol>
+
+
+
+
+		<h1>Sector: Energy & Natural Resources</h1>
+
+			<h2>Industry: Oil & Gas</h2>
+
+					Contributor					Amount
+				<ol>
+					<li>Koch Industries			$8,420,283</li>
+					<li>Chevron Corp	 		$4,096,188</li>
+					<li>Stewart & Stevenson		$3,821,050</li>
+				</ol>
+
+					<h3>Sub-Industry: Natural Gas Pipelines</h3>
+
+							Contributor					Amount
+						<ol> 
+							<li>Energy Transfer Equity	$1,920,030</li>
+							<li>Ariel Corp 				$1,557,100</li>
+							<li>Kinder Morgan Inc		$958,050</li>
+						</ol>
+
+			<h2>Industry: Mining</h2>
+
+					Contributor					Amount
+				<ol>
+					<li>Koch Industries			$8,420,283</li>
+					<li>Chevron Corp	 		$4,096,188</li>
+					<li>Stewart & Stevenson		$3,821,050</li>
+				</ol>
+
+			<h2>Industry: Alternative Energy Production & Services</h2>
+
+					Contributor					Amount
+				<ol>
+					<li>Poet LLC						$372,150</li>
+					<li>American Wind Energy Assn	 	$186,804</li>
+					<li>Growth Energy					$139,485</li>
+				</ol>
+
+			<h2>Industry: Electric Utilities</h2>
+
+					Contributor										Amount
+				<ol>
+					<li>NextEra Energy								$2,263,117</li>
+					<li>National Rural Electric Cooperative Assn	$1,714,165</li>
+					<li>Exelon Corp									$1,564,097</li>
+				</ol>	
+
+			<h2>Industry: Waste Management</h2>
+
+					Contributor						Amount
+				<ol>
+					<li>Penn Waste					$153,200</li>
+					<li>Waste Management Inc		$90,053</li>
+					<li>California Waste Solutions	$67,650</li>
+				</ol>						
+
+
+		<h1>Sector: Construction</h1>
+			<h2>Industry: Forestry & Forest Products</h2>
+
+		<h1>Sector: Defense</h1>
+			<h2>Industry: Defense AerospaceDefense Aerospace</h2>
+    		<h2>Industry: Defense Electronics</h2>
+     		<h2>Industry: Miscellaneous Defense</h2>
+
+		<h1>Sector: Health</h1>
+			<h2>Industry: Pharmaceuticals / Health Products</h2>
+				<h3>Sub-Industry: Medical Supplies</h3>
+				<h3>Sub-Industry: Nutritional & Dietary Supplements</h3>
+				<h3>Sub-Industry: Pharmaceutical Manufacturing</h3>
+
+
+
+	</div>
+	<div class ='controllers'>
+
+	controllers 
+
+		industries_controller.rb
+		companies_controller.rb
+		products_controller.rb
+		welcome_controller.rb
+
+	</div>
+	<div class ='views'>
+
+	views 
+
+		industries
+		companies
+		products
+			_form.html.erb
+			edit_product.html.erb
+			edit.html.erb
+			show.html.erb
+			new_product.html.erb
+			new.html.erb
+
+
+		welcome
+			index.html.erb
+			about.html.erb
+		layouts
+			application.html.erb
+			
+
+	</div>
+<div class ='db'>
+db
+
+	schema.rb
+	seeds.rb
+
+	migrate
+
+		create_industries.rb
+
+			class CreateIndustries < ActiveRecord::Migration[5.0]
+			  def change
+			    create_table :industries do |t|
+			      t.string :name
+
+			      t.timestamps
+			    end
+			  end
+			end
+
+		create_companies.rb
+
+			class CreateCompanies < ActiveRecord::Migration[5.0]
+				  def change
+				    create_table :companies do |t|
+				      t.string :name
+
+				      t.timestamps
+				    end
+				  end
+				end
+
+		create_products.rb
+
+			class CreateProducts < ActiveRecord::Migration[5.0]
+				  def change
+				    create_table :products do |t|
+				      t.string :name
+				      t.string :description
+				      t.string :fair_trade
+				      t.string :animals
+				      t.string :environment
+
+				      t.timestamps
+				    end
+				  end
+				end
+			
+
+
+</div>
+</body>
+</html>
+
+
