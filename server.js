@@ -21,6 +21,7 @@ var db = require('./server/models');
 //  DATA
 ///////////////////
 var products = [];
+var sector_industry = [];
 // var nextId = 1;
 
 /* * HTML Endpoints  */
@@ -87,7 +88,6 @@ app.post('/api/products/new', function productsNew (req, res) {
 /**********
  * SERVER *
  **********/
-
 // Listen on port 3000
 app.listen(process.env.PORT || 3000, function(){
 console.log('Express server is up and running on http://localhost:/3000/');
