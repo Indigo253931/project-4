@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Tell HTML to use Angular -->
+<html ng-app="EcoViews">
+<head>
+		<title>EcoViews</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles/style.css">
+	<!-- Angular first-->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<!-- Bower -->
+	<script src='bower_components/angular-route/angular-route.js'></script>
+	<!-- App -->
+	<script src="scripts/app.js"></script>
+</head>
+	<body>
+		<!-- Main div -->
+		<div class="container">
+			<!-- Navbar -->
+			<header class="navbar">
+				<h1 id='app-name'>EcoViews</h1>
+			</header>
+
+			<h3><a href='templates/productNew.html'>Product form</a></h3>
+
+			<section id="products">
+				<div ng-view>
+				
+				</div>
+			</section>
+			<br>
+		</div>
+	</body>
+</html>

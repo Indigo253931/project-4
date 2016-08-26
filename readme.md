@@ -110,13 +110,10 @@ https://trello.com/b/31kST3qY/project-4
 //      Workflow
 /////////////////////////////
 
-Technical trello cards:
-
-
 
 -Create client directory for front end.
 
-    -Create public directory and touch index.html (this will be the homepage)
+    -Create public directory and touch index.html (this is the homepage)
 
             -Create a scripts directory and touch app.js.
             
@@ -159,8 +156,6 @@ Technical trello cards:
 
 
 
-
-
 Install Bower for front-end dependencies 
     
     Use 'npm install -g bower'. 
@@ -183,7 +178,7 @@ Use NPM to require Express:
 
 Require Mongoose in server.js
 
-
+Use directives ngApp, ngView and ngRepeat
 
 
 ### Technical Requirements
