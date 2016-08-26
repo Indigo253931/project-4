@@ -5,18 +5,12 @@ Unit #4 Project: Portfolio Project
                     //       About
                     /////////////////////////////
 
-    A user can click from a list of seeded sectors. Depending on the sector chosen, user can pick an industry most fitting to the product they are reviewing. 
-        Eventually, a user will also be able to create a sector and industry that belongs to it in order to provide a more extensive list of options for all users. 
+    A user can click from a list of seeded sectors. Depending on chosen sector, user will only have ability to pick an  industry that is predefined to match the parent sector.
 
-    EcoView is an app built for consumers to educate themselves and spread awareness to others about the origins of their purchases - from certified fair-trade coffee, to shampoo not tested on animals, to BPA-free plastics and lead-free paint. 
+        Once an option is chosen, a user is free to submit a form. Eventually, a user will also be able to create a sector and industry that belongs to it in order to provide a more extensive list of options for all users. This will first be verfied by app's admin before update occurs. 
 
-    Providing product transparency and a community for individuals who support sustainable, yet quality products are the goals of this app.
+    EcoView is an app built for consumers to educate themselves and spread awareness throughout their communities about the origins of their purchases - certified fair-trade coffee, shampoo not tested on animals, BPA-free plastics, lead-free paint are just a few of the little actions we can take when making choices about our purchases. 
 
-     It also allows you to document/keep track of your favorite, share your reviews and read/search data submitted by other users to make mroe informed purchases. 
-
-     Support sustainability. Protect animals. Restore the envrionment. Connect, learn from and share with others.
-    Users can search for a string in the database which will render all products/companies/industries, etc. related to string.  
-    Users can sign up and login with authentication. 
 
     ### General Approach 
 
