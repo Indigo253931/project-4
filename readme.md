@@ -86,12 +86,14 @@ https://trello.com/b/31kST3qY/project-4
 //      Wireframes
 /////////////////////////////
 
-<img class='wireframes' src='Wireframes/Home.png'/>
-<br>
-<img class='wireframes' src='Wireframes/Sign_Up.png'/>
-<br>
-<img class='wireframes' src='Wireframes/Login.png'/>
-<br>
+<h2>Home</h2><img class='wireframes' src='Wireframes/Home.png'/><br>
+<h2>About</h2><img class='wireframes' src='Wireframes/About.png'/><br>
+<h2>Sign Up</h2><img class='wireframes' src='Wireframes/Sign_Up.png'/><br>
+<h2>Login</h2><img class='wireframes' src='Wireframes/Login.png'/><br>
+<h2>New product</h2><img class='wireframes' src='Wireframes/newProduct.png'/><br>
+<h2>All products</h2><img class='wireframes' src='Wireframes/indexProduct.png'/><br>
+<h2>One product</h2><img class='wireframes' src='Wireframes/showProduct.png'/><br>
+<h2>Delete product</h2><img class='wireframes' src='Wireframes/deleteProduct.png'/><br>
 /////////////////////////////
 //      Pitch Deck
 /////////////////////////////
