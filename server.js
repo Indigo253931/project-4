@@ -55,9 +55,9 @@ app.get('/api/products', function productsIndex (req, res){
 });
 
 // Get one product
-app.get('/api/products/:name', function productsShow(req, res){
+app.get('/api/products/:id', function productsShow(req, res){
 		// Find one product
-	db.Product.findOne({name: req.params.name}, function(err, product){
+	db.Product.findOne({product_name: req.params.product_name}, function(err, product){
 		if (err) { return console.log('show error: ' + err); }
 		// Send one product as JSON response
 		res.json(product);
@@ -69,10 +69,10 @@ app.post('/api/products/new', function productsNew (req, res) {
 	var newProduct;
 		console.log(req.body);
 		newProduct = new db.Product({
-		name: req.body.name,
-		kind: req.body.kind,
-		activity: req.body.activity,
-		description: req.body.description,
+		company_name: req.body.company_name,
+		product_name: req.body.product_name,
+		comments: req.body.comments,
+		image: req.body.image
 });
 	// Save newProduct to database
     newProduct.save(function(err, product){
