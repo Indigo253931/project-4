@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<!-- Angular first-->
 	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<!-- Bower -->
+	<!-- Angular route -->
 	<script src='bower_components/angular-route/angular-route.js'></script>
 	<!-- App -->
 	<script src="scripts/app.js"></script>
@@ -16,12 +16,17 @@
 		<!-- Main div -->
 		<div class="container">
 			<!-- Navbar -->
-			<header class="navbar">
-				<h1 id='app-name'>EcoViews</h1>
-			</header>
-
-			<h3><a href='templates/productNew.html'>Add a Product</a></h3>
-
+			<h1>EcoViews</h1>
+				<nav>
+					<ul>
+						<li><a href='templates/about.html'>About</a></li>
+						<li><a href='templates/signup.html'>Sign Up</a> or <a href='templates/login.html'>Login</a></li>
+						<li><a href='templates/profile.html'>Profile</a>
+						<a href='templates/productIndex.html'>All Products</a>
+						<a href='templates/productNew.html'>Add a Product</a>
+					</ul>
+				</nav>
+				
 			<section id="products">
 				<div ng-view>
 				

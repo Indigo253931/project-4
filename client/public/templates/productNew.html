@@ -1,31 +1,40 @@
+<nav>
+    <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='index.html'>About</a></li>
+        <li><a href='templates/signup.html'>Sign Up</a> or <a href='templates/login.html'>Login</a></li>
+        <li><a href='templates/profile.html'>Profile</a>
+        <a href='templates/productIndex.html'>All Products</a>
+    </ul>
+</nav>
 <!-- Register a controller for section of application. -->
-			<form id='activity-form' ng-controller="ProductsController as productCtrl" ng-submit="submit()">
+			<form id='product-form' ng-controller="ProductsController as productCtrl" ng-submit="submit()">
 				<!-- Name input -->
 				<table style='width:100%''>
 					<div class='form labels'>
-						<label for="newProduct-name">Name:</label>
+						<label for="newProduct-name">Product:</label>
 						<!-- Bind HTML element's value to model. -->
-						<input id='form-label-name' type="text" id="newProduct-name" ng-model="newProduct.name" placeholder=''>
+						<input id='form-label-name' type="text" id="newProduct-name" ng-model="newProduct.product_name" placeholder=''>
 					</div></tr>
-					<!-- Kind input -->
+					<!-- Company -->
 					<tr><div class='form labels'>
-						<label for="newStrain-kind">Kind:</label>
-						<input type="text" id="newStrain-kind" ng-model="newStrain.kind" placeholder="Sativa">
+						<label for="newProduct-company">Company:</label>
+						<input type="text" id="newProduct-company" ng-model="newProduct.company" placeholder=''>
 					</div></tr>
-					<!-- Activity input -->
+					<!-- Comments -->
 					<tr><div class='form labels'>
-						<label for="newStrain-activity">Activity:</label>
-						<input type="text" id="newStrain-activity" ng-model="newStrain.activity" placeholder="Hiking">
+						<label for="newProduct-comments">Comments:</label>
+						<input type="text" id="newProduct-comments" ng-model="newProduct.comments" placeholder=''>
 					</div></tr>
-					<!-- Description input -->
+					<!-- Image -->
 					<tr><div class='form labels'>
-						<label for="newStrain-description">Description:</label>
-						<input type="text" id="newStrain-description" ng-model="newStrain.description" placeholder="The best strain for hiking in the Rocky Mountains!">
+						<label for="newProduct-image">Image:</label>
+						<input type="text" id="newProduct-image" ng-model="newProduct.image" placeholder=''>
 					</div></tr>
 					<!-- Submit form -->
 					<div>
-						<button type='button' ngClick='submit-form'>
-							<input type="submit" value="Create a pairing reccomendation">Submit</button>
+						
+							<input type='submit' value='Add new product'>
 					</div>
 				</table>
 			</form>

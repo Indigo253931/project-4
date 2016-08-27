@@ -104,6 +104,7 @@ https://trello.com/b/31kST3qY/project-4
 
 -Create server directory.
 -Install Node, Express and Mongo
+
     -Add 'node_modules' to .gitignore file.
     -Create models directory. 
         -Touch index.js, product.js and user.js
@@ -155,6 +156,7 @@ Use NPM to require Express:
 Require Mongoose in server.js
 
 Install body parser and mongoose
+    'npm install mongoose --save'
 
 Use directives ngApp, ngView, ngController and ngRepeat
 

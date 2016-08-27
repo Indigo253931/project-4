@@ -4,7 +4,6 @@ var Schema = mongoose.Schema;
 
 var SectorIndustrySchema = new Schema({
 	sector: String,
-
 	//get one sector
 	industries: [String]
 	//get all industries for sector

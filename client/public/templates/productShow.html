@@ -1,14 +1,24 @@
-<!-- Create Angular views and build UI by templating directly into HTML with expressions.
- -->
-<section class='container'>
-	<div>
-	<h2 class='product_name'>{{product.product_name}}</h2>
-		<h3 class='company_name'>{{product.company_name}}</h3>
-			<ul>
-				<div>{{product.image}}</div>
-				<li>{{product.sector}}</li>
-				<li>{{product.industry}}</li>
-				<li>{{product.comments}}</li>
-			</ul>
-	</div>
-</section>
+<nav>
+    <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='index.html'>About</a></li>
+        <li><a href='templates/signup.html'>Sign Up</a> or <a href='templates/login.html'>Login</a></li>
+        <li><a href='templates/profile.html'>Profile</a>
+        <a href='templates/productIndex.html'>All Products</a>
+        <a href='templates/productNew.html'>Add a Product</a>
+    </ul>
+</nav>
+	<!-- Create Angular views and build UI by templating directly into HTML with expressions.
+	 -->
+	<section class='container'>
+		<div>
+		<h2 class='product_name'>{{product.product_name}}</h2>
+			<h3 class='company_name'>{{product.company_name}}</h3>
+				<ul>
+					<div>{{product.image}}</div>
+					<li>{{product.sector}}</li>
+					<li>{{product.industry}}</li>
+					<li>{{product.comments}}</li>
+				</ul>
+		</div>
+	</section>
