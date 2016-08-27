@@ -16,32 +16,7 @@ Unit #4 Project: Portfolio Project
 
     ### General Approach 
 
-2 Models: 
-
-'User': 
-{
-    'username' : 'String',
-    'email' : 'String',
-    'password' : 'String'
-    'location' : 'String',
-    'avatar' : 'String'
-}
-
-  
-'Product' 
-{
-    'product_name' :
-    sector' : 'String',
-    'industry' : 'String',
-    'company_name' : 'String',
-    'comments' : ['String'],
-    'image' : 'String'
-}
-
-'sector_industry' 
-{
-    'sector1' : ['industry1', 'industry2', 'industry3']
-}
+Three models: User, Product and SectorIndustry
 
  
 2015 - 2016 Top Contributers

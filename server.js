@@ -85,6 +85,20 @@ app.post('/api/products/new', function productsNew (req, res) {
 	});
 
 
+// Seed Data
+ALL_PRODUCTS = [
+{
+		'sector': 'Construction',
+		'industry': 'Building Materials & Equipment',
+		'company_name': 'American limetechnology',
+		'product_name': 'Breathe Natual Fibre Insulation',
+		'comment': ['Insulation product made from premium grade hemp and flax fibrewhich create a naturally efficient thermal and acoustic insulation product for walls, floors and roofs.'],
+		'image': 'http://americanlimetechnology.com/wp-content/uploads/2012/01/Breathe-logo-100x240.png',
+	
+	},
+];
+
+
 /**********
  * SERVER *
  **********/

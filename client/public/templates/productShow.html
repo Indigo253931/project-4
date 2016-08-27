@@ -1,13 +1,14 @@
 <!-- Create Angular views and build UI by templating directly into HTML with expressions.
  -->
-<section id='products' class='container'>
+<section class='container'>
 	<div>
-	<h2 class="product-name">{{product.name}}</h2>
-		<ul>
-			<li>{{product.sector}}</li>
-			<li>{{product.industry}}</li>
-			<li>{{product.company}}</li>
-			<li>{{product.description}}</li>
-		</ul>
+	<h2 class='product_name'>{{product.product_name}}</h2>
+		<h3 class='company_name'>{{product.company_name}}</h3>
+			<ul>
+				<div>{{product.image}}</div>
+				<li>{{product.sector}}</li>
+				<li>{{product.industry}}</li>
+				<li>{{product.comments}}</li>
+			</ul>
 	</div>
 </section>

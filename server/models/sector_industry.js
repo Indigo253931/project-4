@@ -1,13 +1,15 @@
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-// var SectorIndustrySchema = new Schema({
-// 	name: String,
-// 	kind: String,
-// 	activity: [String],
-// 	description: String
-// });
 
-// var SectorIndustry = mongoose.model('SectorIndustry', SectorIndustrySchema);
+var SectorIndustrySchema = new Schema({
+	sector: String,
 
-// module.exports = SectorIndustry;
+	//get one sector
+	industries: [String]
+	//get all industries for sector
+});
+
+var SectorIndustry = mongoose.model('SectorIndustry', SectorIndustrySchema);
+
+module.exports = SectorIndustry;

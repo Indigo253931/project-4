@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
 	sector: String,
 	industry: String,
-	product_name: String,
 	company_name: String,
+	product_name: String,
 	comments: [String],
 	image: String
 });
