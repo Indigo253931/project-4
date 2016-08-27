@@ -8,7 +8,7 @@ var app = express();
 app.use(express.static('./client/public'));
 // Require mongoose
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/ecoviews');
+mongoose.createConnection('mongodb://localhost/ecoviews');
 // Require and use Body Parser
 var bodyParser = require('body-parser');
 // Support JSON-encoded bodies
