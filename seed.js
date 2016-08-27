@@ -4,13 +4,15 @@
  var db = require('./server/models');
 
 
+
 // // Seed Data
 // ALL_PRODUCTS = [
 // {
-// 		'name': 'Cinex',
-// 		'kind': 'Sativa',
-// 		'activity': ['Dancing', 'Hiking'],
-// 		'description': 'When that cup of coffee didn’t do the job. Providing wired euphoria that feeds creativity, this sativa can rekindle interest in tasks that may otherwise be a drag.'
+// 		'sector': 'Cinex',
+// 		'industry': 'Sativa',
+// 		'company_name': ['Dancing', 'Hiking'],
+// 		'product_name': 'When that cup of coffee didn’t do the job. Providing wired euphoria that feeds creativity, this sativa can rekindle interest in tasks that may otherwise be a drag.'
+		
 // 	},
 
 // 	{

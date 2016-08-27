@@ -44,12 +44,13 @@ app.get('/', function homepage (req,res) {
  });
 
  /* * JSON API Endpoints */
+
 //Get all products
 app.get('/api/products', function productsIndex (req, res){
 	// Find strain data from database and save it as a variable 'strains'
 	db.Product.find(function(err, products){
 		if (err) { return console.log('index error: ' + err); }
-		// Send all strain pairing reccomendations as JSON response
+		// Send all products as JSON response
 		res.json(products);
 	});
 });
@@ -69,10 +70,10 @@ app.post('/api/products/new', function productsNew (req, res) {
 	var newProduct;
 		console.log(req.body);
 		newProduct = new db.Product({
-		company_name: req.body.company_name,
-		product_name: req.body.product_name,
-		comments: req.body.comments,
-		image: req.body.image
+			company_name: req.body.company_name,
+			product_name: req.body.product_name,
+			comments: req.body.comments,
+			image: req.body.image
 });
 	// Save newProduct to database
     newProduct.save(function(err, product){
