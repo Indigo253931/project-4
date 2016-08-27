@@ -25,6 +25,7 @@ Seeded data
 
 Sector: Agribusiness
 Industries: ['Crop Production & Basic Processing', 'Tobacco', Dairy', 'Poultry & Eggs', 'Livestock', 'Agricultural Services & Products',  'Food Processing & Sales', 'Forestry & Forest Products']
+
 Top Contributer: 
 
 Sector: Energy & Natural Resources
@@ -152,6 +153,8 @@ Use NPM to require Express:
     Add 'node_modules' to .gitignore file so it is not tracked by git.
 
 Require Mongoose in server.js
+
+Install body parser and mongoose
 
 Use directives ngApp, ngView, ngController and ngRepeat
 
