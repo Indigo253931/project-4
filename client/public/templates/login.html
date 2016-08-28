@@ -3,15 +3,34 @@
     <a href='productIndex.html'>All Products</a>
     <a href=' productNew.html'>Add a Product</a>
 </nav>
-
 	<section class='container'> 
-			<div class='login_form'>
-				<h2>{{user.username}}</a></h2>
-					<ul>
-						<li>{{user.email}}</li>
-						<li>{{user.password}}</li>
-					</ul>
-			</div>
+		<div class='login_form'>
+			<!-- Register a controller for signup page-->
+			<form id='login-form' ng-controller="LoginController as loginCtrl" ng-submit="submit()">
+				<!-- Username -->
+				<table style='width:100%''>
+					<div class='form labels'>
+						<label for="User-username">Username: {{ user.username }}</label>
+						<!-- Bind HTML element's value to model. -->
+						<input id='form-label-name' type="text" id="User-username" ng-model="User.username" placeholder='Your name here'>
+					</div></tr>
+					<!-- Email -->
+					<tr><div class='form labels'>
+						<label for="User-email">Email: {{ user.email }}</label>
+						<input type="text" id="User-email" ng-model="User-email.email" placeholder='youremail@email.com'>
+					</div></tr>
+					<!-- Password -->
+					<tr><div class='form labels'>
+						<label for="User-password">Password: {{ user.password }}</label>
+						<input type="text" id="User-password" ng-model="User.password" placeholder=''>
+					</div></tr>
+					<!-- Login -->
+					<div>
+							<input type='submit' value='Login!'>
+					</div>
+				</table>
+			</form>
+		</div>
 	</section>
 <footer>
 	<a href='index.html'>Home</a>

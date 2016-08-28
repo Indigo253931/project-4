@@ -9,28 +9,28 @@ var app = angular.module('EcoViews', ['ngRoute'])
 $routeProvider
 		.when('/', {
 			templateUrl: 'index.html',
-		}).
-		when('/about', {
+		})
+		.when('/about', {
 			templateUrl: 'templates/about.html',
-		}).
-		when('/signup', {
+		})
+		.when('/signup', {
 			templateUrl: 'templates/signup.html',
-		}).
-		when('/login', {
+		})
+		.when('/login', {
 			templateUrl: 'templates/login.html',
-		}).
-		when('/profile', {
+		})
+		.when('/profile', {
 			templateUrl: 'templates/profile.html',
-		}).
-		when('products', {
+		})
+		.when('products', {
 			templateUrl: 'templates/productIndex.html',
 			controller: 'ProductIndexCtrl'
-		}).
-		when('products/:id', {
+		})
+		.when('products/:id', {
 			templateUrl: 'templates/productShow.html',
 			controller: 'ProductShowCtrl'
-		}).
-		when('products/new', {
+		})
+		.when('products/new', {
 			templateUrl: 'templates/productNew.html',
 			controller: 'ProductNewCtrl'
 		});
