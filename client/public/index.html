@@ -5,16 +5,16 @@
 		<title>EcoViews</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/style.css">
-	<!-- Angular first-->
-	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-	<!-- Angular route -->
-	<script src='bower_components/angular-route/angular-route.js'></script>
+	<!-- Initialize Angular first-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <!-- Initialize Angular Routes -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
 	<!-- App -->
 	<script src="scripts/app.js"></script>
 </head>
 	<body>
 		<!-- Main div -->
-		<div class="container">
+		<div id='homepage' class="container">
 			<!-- Navbar -->
 				<nav>
 					<a href='templates/signup.html'>Sign Up</a> or <a href='templates/login.html'>Login</a>
@@ -22,15 +22,23 @@
 					<a href='templates/productIndex.html'>All Products</a>
 					<a href='templates/productNew.html'>Add a Product</a>		
 				</nav>
-				
-		<h1>EcoViews</h1>
-			<h2>Home</h2>
-			
 						<section id="products">
 							<div ng-view>
 							
 							</div>
 						</section>
+
+	<div class='threats'>
+	    <h2>What are some of the biggest threats faced by earth and all species today?</h2>
+	    	<img src='/styles/images/oil.gif'/>
+	    	<img src='https://media.giphy.com/media/R8c8b8EWKIKoU/giphy.gif'/>
+	    	<img src='https://media.giphy.com/media/10lOFFB9NizBrW/giphy.gif'/>
+	    	<img src='https://media.giphy.com/media/ekb69d2XpdWSY/giphy.gif'/>
+	    	<img src='https://media.giphy.com/media/LiA4nEaBL1TKU/giphy.gif'/>
+	    	<img src='hhttps://media.giphy.com/media/11iHkEcgPc0Gkw/giphy.gif'/>
+	    	<img src='https://media.giphy.com/media/eyoofAftoUKic/giphy.gif'/>
+	    	<img src='https://media.giphy.com/media/12tdIJvLTmxs7C/giphy.gif'/>
+</div>
 	<footer>
 		<a href='templates/about.html'>About</a>
 	</footer>

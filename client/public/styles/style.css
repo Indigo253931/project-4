@@ -1,10 +1,43 @@
+img {
+	height: 200px;
+	width: 250px;
+}
+
 h1 {
 	text-align: center;
 }
 
-nav {
-	background-color: #72CC9C;
-	height: 20px;
+nav, footer {
+	background-color: #DCE9F5;
+	height: 30px;
 	border-radius: 5px;
-	padding: 2px;
+	padding: 12px;
+	margin: 8px;
+	font-size: 30px;
+}
+
+body {
+	/*background-image: url('rainforest.gif');*/
+	background-size: cover;
+	/*opacity: .7;*/
+	text-align: center;
+}
+
+footer {
+	position: fixed;  
+	bottom: 0px;
+
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: #005C59;
+    -webkit-transition: color .2s ease-out,color 1s ease-in;
+    transition: color .2s ease-out, color 1s ease-in;
+}
+
+.about_summary {
+	text-align: center;
 }

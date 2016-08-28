@@ -3,23 +3,24 @@ router = express.Router(),
 //Parse information from POST
 bodyParser = require('body-parser');
 
-var productsController = require ('../controllers/productsController');
-
+var productIndexController = require ('../scripts/productIndexController');
+var productShowController = require ('../scripts/productIndexController');
+var productNewController = require ('../scripts/productIndexController');
 router.route('/products')
 
 	//GET all products
-	.get(productsController)
-
-	// POST a new product
-	.post(productsController.createProduct);
+	.get(productIndexController);
 
 router.route('/products/:id')
 
+	//GET a product
+	.get(productShowController)
+
 	// POST a new product
-	.get(productsController.getProduct)
+	.post(productNewController.createProduct)
 
 	// PATCH update an existing product
-	.patch(productsController.updateProduct)
+	.patch(productShowController.updateProduct)
 
 	// DELETE remove a product from db
 	.delete(productsController.removeProduct);

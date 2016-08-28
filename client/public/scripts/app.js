@@ -6,8 +6,8 @@ var app = angular.module('EcoViews', ['ngRoute'])
 
 .config([('$routeProvider', 
 		function($routeProvider){
-$routeProvider.
-		when('/', {
+$routeProvider
+		.when('/', {
 			templateUrl: 'index.html',
 		}).
 		when('/about', {
@@ -45,7 +45,7 @@ $routeProvider.
 	function ProductIndexController($scope, $http){
 		$http.get('http://localhost:3000/api/products')
 		.then(function(response){
-			$scope.products=response.products;
+			$scope.products=$scope.response.products;
 			console.log($scope.products);
 		});
 	}
@@ -54,15 +54,16 @@ $routeProvider.
 	function ProductShowController($scope, $http, $routeParams){
 		$http.get('http://localhost:3000/api/products/' + $routeParams.name)
 		.then(function(response){
-			$scope.products=response.product;
+			$scope.products=$scope.response.product;
 			console.log($scope.product);
 		});
 	}
 
 	ProductNewController.$inject = ['$scope', '$http', '$routeParams'];
 	function ProductNewController($scope, $http, $routeParams){
-		$http.post('http://localhost:3000/api/products/', newProduct);
-			console.log(newProduct);
+		$http.post('http://localhost:3000/api/products/', $scope.newProduct);
+			console.log($scope.newProduct);
+			newProduct();
 		}
 
 var products = [];

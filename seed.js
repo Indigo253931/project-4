@@ -3,14 +3,8 @@
 
  var db = require('./server/models');
 
- var products = [];
-
- var sectors = [];
-
-// ALL_PRODUCTS = 
 // Seed Data
-
-products.push([
+var products= [
 {
 		'sector': 'Construction',
 		'industry': 'Building Materials & Equipment',
@@ -30,10 +24,10 @@ products.push([
 		'Ceritfied vegan by Vegan Action'],
 		'image': 'https://www.drbronner.com/mm5/graphics/00000002/organic-coconutoil-whole-14oz_2.jpg'
 }
-]);
+];
 
 
-sectors.push = ([
+var sectors = ([
 {
 	sector: 'Agribusiness',
 	industries: ['Crop Production & Basic Processing', 'Tobacco', 'Dairy', 
