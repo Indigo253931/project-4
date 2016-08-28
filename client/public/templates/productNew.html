@@ -1,14 +1,10 @@
 <nav>
-    <ul>
-        <li><a href='index.html'>Home</a></li>
-        <li><a href='index.html'>About</a></li>
-        <li><a href='signup.html'>Sign Up</a> or <a href='login.html'>Login</a></li>
-        <li><a href='profile.html'>Profile</a></li>
-        <li><a href='productIndex.html'>All Products</a></li>
-    </ul>
+    <a href='signup.html'>Sign Up</a> or <a href='login.html'>Login</a>
+    <a href='profile.html'>Profile</a>
+    <a href='productIndex.html'>All Products</a>
 </nav>
 <!-- Register a controller for section of application. -->
-			<form id='product-form' ng-controller="ProductsController as productCtrl" ng-submit="submit()">
+			<form id='product-form' ng-controller="ProductController as productCtrl" ng-submit="submit()">
 				<!-- Name input -->
 				<table style='width:100%''>
 					<div class='form labels'>
@@ -33,8 +29,11 @@
 					</div></tr>
 					<!-- Submit form -->
 					<div>
-						
-							<input type='submit' value='Add new product'>
+						<input type='submit' value='Add new product'>
 					</div>
 				</table>
 			</form>
+<footer>
+	<a href='index.html'>Home</a>
+	<a href='index.html'>About</a>
+</footer>

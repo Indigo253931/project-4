@@ -1,10 +1,10 @@
 // Create an Angular module
 var app = angular.module('EcoViews', ['ngRoute'])
-.controller('ProductsIndexController', ProductsIndexController)
-.controller('ProductsShowController', ProductsShowController)
-.controller('ProductsNewController', ProductsNewController);
+.controller('ProductIndexController', ProductIndexController)
+.controller('ProductShowController', ProductShowController)
+.controller('ProductNewController', ProductNewController)
 
-	app.config([('$routeProvider', 
+.config([('$routeProvider', 
 		function($routeProvider){
 $routeProvider.
 		when('/', {
@@ -23,16 +23,16 @@ $routeProvider.
 			templateUrl: 'templates/profile.html',
 		}).
 		when('products', {
-			templateUrl: 'templates/products-index.html',
-			controller: 'ProductsIndexCtrl'
+			templateUrl: 'templates/productIndex.html',
+			controller: 'ProductIndexCtrl'
 		}).
-		when('products/:name', {
-			templateUrl: 'templates/products-show.html',
-			controller: 'ProductsShowCtrl'
+		when('products/:id', {
+			templateUrl: 'templates/productShow.html',
+			controller: 'ProductShowCtrl'
 		}).
 		when('products/new', {
-			templateUrl: 'templates/products-new.html',
-			controller: 'ProductsNewCtrl'
+			templateUrl: 'templates/productNew.html',
+			controller: 'ProductNewCtrl'
 		});
 	})
 	]);
@@ -41,8 +41,8 @@ $routeProvider.
 				// CONTROLLERS //
 				/////////////////
 
-	ProductsIndexController.$inject = ['$scope', '$http'];
-	function ProductsIndexController($scope, $http){
+	ProductIndexController.$inject = ['$scope', '$http'];
+	function ProductIndexController($scope, $http){
 		$http.get('http://localhost:3000/api/products')
 		.then(function(response){
 			$scope.products=response.products;
@@ -50,8 +50,8 @@ $routeProvider.
 		});
 	}
 
-	ProductsShowController.$inject = ['$scope', '$http', '$routeParams'];
-	function ProductsShowController($scope, $http, $routeParams){
+	ProductShowController.$inject = ['$scope', '$http', '$routeParams'];
+	function ProductShowController($scope, $http, $routeParams){
 		$http.get('http://localhost:3000/api/products/' + $routeParams.name)
 		.then(function(response){
 			$scope.products=response.product;
@@ -59,8 +59,8 @@ $routeProvider.
 		});
 	}
 
-	ProductsNewController.$inject = ['$scope', '$http', '$routeParams'];
-	function ProductsNewController($scope, $http, $routeParams){
+	ProductNewController.$inject = ['$scope', '$http', '$routeParams'];
+	function ProductNewController($scope, $http, $routeParams){
 		$http.post('http://localhost:3000/api/products/', newProduct);
 			console.log(newProduct);
 		}
