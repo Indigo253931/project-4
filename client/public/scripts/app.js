@@ -70,7 +70,7 @@ var products = [];
 var sectors = [];
 // ALL_PRODUCTS = 
 // Seed Data
-products.push([
+all_products = [
 {
 		'sector': 'Construction',
 		'industry': 'Building Materials & Equipment',
@@ -90,10 +90,10 @@ products.push([
 		'Ceritfied vegan by Vegan Action'],
 		'image': 'https://www.drbronner.com/mm5/graphics/00000002/organic-coconutoil-whole-14oz_2.jpg'
 }
-]);
+];
 
 
-sectors.push = ([
+all_sectors = (
 {
 	sector: 'Agribusiness',
 	industries: ['Crop Production & Basic Processing', 'Tobacco', 'Dairy', 
@@ -129,4 +129,4 @@ sectors.push = ([
 	industries: ['Air Transport', 'Automotive', 'Trucking',
 	'Railroads', 'Sea Transport']
 }
-]);
+);
