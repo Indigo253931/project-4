@@ -3,6 +3,8 @@ var app = angular.module('EcoViews', ['ngRoute'])
 .controller('ProductIndexController', ProductIndexController)
 .controller('ProductShowController', ProductShowController)
 .controller('ProductNewController', ProductNewController)
+.controller('SectorIndexController', SectorIndexController)
+.controller('SectorShowController', SectorShowController)
 
 .config([('$routeProvider', 
 		function($routeProvider){
@@ -24,16 +26,25 @@ $routeProvider
 		})
 		.when('products', {
 			templateUrl: 'templates/productIndex.html',
-			controller: 'ProductIndexCtrl'
+			controller: 'ProductIndexController'
 		})
 		.when('products/:id', {
 			templateUrl: 'templates/productShow.html',
-			controller: 'ProductShowCtrl'
+			controller: 'ProductShowController'
 		})
 		.when('products/new', {
 			templateUrl: 'templates/productNew.html',
-			controller: 'ProductNewCtrl'
+			controller: 'ProductNewController'
+		})
+		.when('/products/sectors', {
+			templateUrl: 'templates/productIndex.html',
+			controller: 'SectorIndexController'
+		})
+		.when('products/sectors/:id', {
+			templateUrl: 'templates/productShow.html',
+			controller: 'SectorShowController'
 		});
+
 	})
 	]);
 
@@ -69,12 +80,12 @@ $routeProvider
 		}
 
 					// Sectors
-					
+
 	SectorIndexController.$inject = ['$scope', '$http'];
 	function SectorIndexController($scope, $http){
 		$http.get('http://localhost:3000/api/products/sectors')
 		.then(function(response){
-			$scope.sectors=$scope.response.sectors;
+			$scope.sectors = $scope.response.sectors;
 			console.log($scope.sectors);
 		});
 	}

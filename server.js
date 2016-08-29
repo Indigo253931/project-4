@@ -50,7 +50,7 @@ app.get('/', function homepage (req,res) {
 
 //Get all products
 app.get('/api/products', function productsIndex (req, res){
-	// Find product data from database and save it as a variable 'strains'
+	// Find product data from database and save it as a variable 'products'
 	db.Product.find({},function(err, products){
 		if (err) { return console.log('index error: ' + err); }
 		// Send all products as JSON response
@@ -95,23 +95,25 @@ app.post('/api/products/new', function productsNew (req, res) {
 
 //Get all sectors
 app.get('/api/products/sectors', function sectorsIndex (req, res){
-	// Find product data from database and save it as a variable 'strains'
+	// Find sector data from database and save it as a variable 'sectors'
 	db.SectorIndustry.find({},function(err, sectors){
 		if (err) { return console.log('index error: ' + err); }
-		// Send all products as JSON response
+		// Send all sectors as JSON response
 		res.json(sectors);
 	});
 });
 
-// Get one product
-app.get('/api/products/sectors/:id', function sectorsShow(req, res){
-		// Find one product
+// Get one sector
+app.get('/api/sectors/:id', function sectorsShow(req, res){
+		// Find one sector
 	db.SectorIndustry.findOne({_id: req.params.id}, function(err, sector){
 		if (err) { return console.log('show error: ' + err); }
-		// Send one product as JSON response
+		// Send one sector as JSON response
 		res.json(sector);
 	});
 });
+
+require('server/routes/routes.js');
 /**********
  * SERVER *
  **********/

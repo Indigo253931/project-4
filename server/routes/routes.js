@@ -7,7 +7,8 @@ var productIndexController = require ('../scripts/productIndexController');
 var productShowController = require ('../scripts/productIndexController');
 var productNewController = require ('../scripts/productIndexController');
 var sectorIndexController = require ('../scripts/sectorIndexController');
-var sectorShowController = require ('../scripts/sectorIndexController');
+var sectorShowController = require ('../scripts/sectorShowController');
+
 
 router.route('/products')
 
