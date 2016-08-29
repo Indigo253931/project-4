@@ -94,7 +94,7 @@ app.post('/api/products/new', function productsNew (req, res) {
 	});
 
 //Get all sectors
-app.get('/api/products/sectors', function sectorsIndex (req, res){
+app.get('/api/sectors', function sectorsIndex (req, res){
 	// Find sector data from database and save it as a variable 'sectors'
 	db.SectorIndustry.find({},function(err, sectors){
 		if (err) { return console.log('index error: ' + err); }
@@ -113,7 +113,7 @@ app.get('/api/sectors/:id', function sectorsShow(req, res){
 	});
 });
 
-require('server/routes/routes.js');
+// require('server/routes/routes.js');
 /**********
  * SERVER *
  **********/
