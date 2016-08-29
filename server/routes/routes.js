@@ -3,40 +3,54 @@ router = express.Router(),
 //Parse information from POST
 bodyParser = require('body-parser');
 
-var productIndexController = require ('../scripts/productIndexController');
-var productShowController = require ('../scripts/productIndexController');
-var productNewController = require ('../scripts/productIndexController');
-var sectorIndexController = require ('../scripts/sectorIndexController');
-var sectorShowController = require ('../scripts/sectorShowController');
-
+ var productsController = require ('../controllers/products');
+ var sectorsController = require ('../controllers/sectors');
+ var usersController = require ('../controllers/users');
 
 router.route('/products')
 
 	//GET all products
-	.get(productIndexController);
+	.get(productsController.getAll)
+
+	.post(productsController.createProduct);
 
 router.route('/products/:id')
 
 	//GET a product
-	.get(productShowController)
-
-	// POST a new product
-	.post(productNewController.createProduct)
+	.get(productsController.getProduct)
 
 	// PATCH update an existing product
-	.patch(productUpdateController.updateProduct)
+	.patch(productsController.updateProduct)
 
 	// DELETE remove a product from db
-	.delete(productDeleteController.removeProduct);
+	.delete(productsController.removeProduct);
 
-router.route('/products/sectors')
+router.route('/sectors')
 
-	//GET all products
-	.get(sectorIndexController);
+	//GET all sectors
+	.get(sectorsController.getAll);
 
-router.route('/products/sectors/:id')
+router.route('/sectors/:id')
 
-	//GET a product
-	.get(sectorShowController);	
+	//GET a sector
+	.get(sectorsController.getSector);
+
+router.route('/users')
+
+	//GET all users
+	.get(usersController.getAll)
+
+	.post(usersController.createUser);
+
+router.route('/users/:id')
+
+	//GET a user
+	.get(usersController.getUser)
+
+	// PATCH update an existing user
+	.patch(usersController.updateUser)
+
+	// DELETE remove a user from db
+	.delete(usersController.removeUser);
 
 module.exports = router;

@@ -3,6 +3,8 @@ var app = angular.module('EcoViews', ['ngRoute'])
 .controller('ProductIndexController', ProductIndexController)
 .controller('ProductShowController', ProductShowController)
 .controller('ProductNewController', ProductNewController)
+.controller('ProductUpdateController', ProductUpdateController)
+.controller('ProductDeleteController', ProductDeleteController)
 .controller('SectorIndexController', SectorIndexController)
 .controller('SectorShowController', SectorShowController)
 
@@ -36,66 +38,14 @@ $routeProvider
 			templateUrl: 'templates/productNew.html',
 			controller: 'ProductNewController'
 		})
-		.when('/products/sectors', {
+		.when('sectors', {
 			templateUrl: 'templates/productIndex.html',
 			controller: 'SectorIndexController'
 		})
-		.when('products/sectors/:id', {
+		.when('sectors/:id', {
 			templateUrl: 'templates/productShow.html',
 			controller: 'SectorShowController'
 		});
 
 	})
 	]);
-
-				/////////////////
-				// CONTROLLERS //
-				/////////////////
-
-					// Products
-
-	ProductIndexController.$inject = ['$scope', '$http'];
-	function ProductIndexController($scope, $http){
-		$http.get('http://localhost:3000/api/products')
-		.then(function(response){
-			$scope.products=$scope.response.products;
-			console.log($scope.products);
-		});
-	}
-
-	ProductShowController.$inject = ['$scope', '$http', '$routeParams'];
-	function ProductShowController($scope, $http, $routeParams){
-		$http.get('http://localhost:3000/api/products/:id' + $routeParams.id)
-		.then(function(response){
-			$scope.products=$scope.response.product;
-			console.log($scope.product);
-		});
-	}
-
-	ProductNewController.$inject = ['$scope', '$http', '$routeParams'];
-	function ProductNewController($scope, $http, $routeParams){
-		$http.post('http://localhost:3000/api/products/', $scope.newProduct);
-			console.log($scope.newProduct);
-			newProduct();
-		}
-
-					// Sectors
-
-	SectorIndexController.$inject = ['$scope', '$http'];
-	function SectorIndexController($scope, $http){
-		$http.get('http://localhost:3000/api/products/sectors')
-		.then(function(response){
-			$scope.sectors = $scope.response.sectors;
-			console.log($scope.sectors);
-		});
-	}
-
-	SectorShowController.$inject = ['$scope', '$http', '$routeParams'];
-	function SectorShowController($scope, $http, $routeParams){
-		$http.get('http://localhost:3000/api/products/sectors/:id' + $routeParams.id)
-		.then(function(response){
-			$scope.sectors=$scope.response.sector;
-			console.log($scope.sector);
-		});
-	}
-

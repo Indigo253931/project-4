@@ -27,7 +27,7 @@ var all_products= [
 ];
 
 
-var all_sectors = ([
+var all_sectors = [
 {
 	sector: 'Agribusiness',
 	industries: ['Crop Production & Basic Processing', 'Tobacco', 'Dairy', 
@@ -63,7 +63,7 @@ var all_sectors = ([
 	industries: ['Air Transport', 'Automotive', 'Trucking',
 	'Railroads', 'Sea Transport']
 }
-]);
+];
 
  db.Product.remove({}, function(err, products){
    db.Product.create(all_products, function(err, products){
@@ -73,6 +73,7 @@ var all_sectors = ([
 
    });
 });
+ 
  db.SectorIndustry.remove({}, function(err, sectors){
    db.SectorIndustry.create(all_sectors, function(err, sectors){
      if (err) { return console.log('ERROR', err); }
