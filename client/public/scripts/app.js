@@ -1,12 +1,5 @@
 // Create an Angular module
 var app = angular.module('EcoViews', ['ngRoute'])
-.controller('ProductIndexController', ProductIndexController)
-.controller('ProductShowController', ProductShowController)
-.controller('ProductNewController', ProductNewController)
-.controller('ProductUpdateController', ProductUpdateController)
-.controller('ProductDeleteController', ProductDeleteController)
-.controller('SectorIndexController', SectorIndexController)
-.controller('SectorShowController', SectorShowController)
 
 .config([('$routeProvider', 
 		function($routeProvider){
@@ -19,32 +12,35 @@ $routeProvider
 		})
 		.when('/signup', {
 			templateUrl: 'templates/signup.html',
+			controller: 'usersController'
 		})
 		.when('/login', {
 			templateUrl: 'templates/login.html',
+			controller: 'usersController'
 		})
 		.when('/profile', {
 			templateUrl: 'templates/profile.html',
+			controller: 'usersController'
 		})
 		.when('products', {
 			templateUrl: 'templates/productIndex.html',
-			controller: 'ProductIndexController'
+			controller: 'productsController'
 		})
 		.when('products/:id', {
 			templateUrl: 'templates/productShow.html',
-			controller: 'ProductShowController'
+			controller: 'productsController'
 		})
 		.when('products/new', {
 			templateUrl: 'templates/productNew.html',
-			controller: 'ProductNewController'
+			controller: 'productsController'
 		})
 		.when('sectors', {
 			templateUrl: 'templates/productIndex.html',
-			controller: 'SectorIndexController'
+			controller: 'sectorsController'
 		})
 		.when('sectors/:id', {
 			templateUrl: 'templates/productShow.html',
-			controller: 'SectorShowController'
+			controller: 'sectorsController'
 		});
 
 	})

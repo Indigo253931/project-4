@@ -1,4 +1,4 @@
-app.controller('ProductsController', ProductsController);
+app.controller('ProductsController', productsController);
 
 
 				/////////////////

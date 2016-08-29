@@ -1,15 +1,16 @@
-var Product = require('./server/models/product');
+var Product = require('../models/product');
+
 
 // GET
-function getAll(request, response) {
+var getAll = function (request, response) {
   Product.find(function(error, products) {
     if(error) response.json({message: 'Could not find any products'});
     response.json({products: products});
   });
-}
+};
 
 // POST
-function createProduct(request, response) {
+var createProduct = function (request, response) {
   console.log('in POST');
   console.log('body:',request.body);
 
@@ -20,10 +21,10 @@ function createProduct(request, response) {
 
     response.json({product: product});
   }).select('-__v');
-}
+};
 
 // GET
-function getProduct(request, response) {
+var getProduct = function (request, response) {
   var id = request.params.id;
 
   Product.findById({_id: id}, function(error, product) {
@@ -31,9 +32,9 @@ function getProduct(request, response) {
 
     response.json({product: product});
   }).select('-__v');
-}
+};
 
-function updateProduct(request, response) {
+var updateProduct = function (request, response) {
   var id = request.params.id;
 
   Product.findById({_id: id}, function(error, product) {
@@ -52,9 +53,9 @@ function updateProduct(request, response) {
       response.json({message: 'Product successfully updated', product: product});
     });
   }).select('-__v');
-}
+};
 
-function removeProduct(request, response) {
+var removeProduct = function (request, response) {
   var id = request.params.id;
 
   Product.remove({_id: id}, function(error) {
@@ -62,12 +63,12 @@ function removeProduct(request, response) {
 
     response.json({message: 'Product successfully deleted'});
   }).select('-__v');
-}
+};
 
 module.exports = {
   getAll: getAll,
-  createCriminal: createProduct,
-  getCriminal: getProduct,
-  updateCriminal: updateProduct,
-  removeCriminal: removeProduct
+  createProduct: createProduct,
+  getProduct: getProduct,
+  updateProduct: updateProduct,
+  removeProduct: removeProduct
 };

@@ -1,15 +1,15 @@
-var User = require('./server/models/user');
+var User = require('../models/user');
 
 // GET
-function getAll(request, response) {
+var getAll = function(request, response) {
   User.find(function(error, users) {
     if(error) response.json({message: 'Could not find any users'});
     response.json({users: users});
   });
-}
+};
 
 // POST
-function createUser(request, response) {
+var createUser = function (request, response) {
   console.log('in POST');
   console.log('body:',request.body);
 
@@ -20,10 +20,10 @@ function createUser(request, response) {
 
     response.json({user: user});
   }).select('-__v');
-}
+};
 
 // GET
-function getUser(request, response) {
+var getUser = function(request, response) {
   var id = request.params.id;
 
   User.findById({_id: id}, function(error, user) {
@@ -31,9 +31,9 @@ function getUser(request, response) {
 
     response.json({user: user});
   }).select('-__v');
-}
+};
 
-function updateUser(request, response) {
+var updateUser = function(request, response) {
   var id = request.params.id;
 
   User.findById({_id: id}, function(error, user) {
@@ -47,14 +47,25 @@ function updateUser(request, response) {
     user.save(function(error) {
       if(error) response.json({messsage: 'Could not update user b/c:' + error});
 
-      response.json({message: 'USer successfully updated', user: user});
+      response.json({message: 'User successfully updated', user: user});
     });
   }).select('-__v');
-}
+};
+
+var removeUser = function (request, response) {
+  var id = request.params.id;
+
+  User.remove({_id: id}, function(error) {
+    if(error) response.json({message: 'Could not delete user b/c:' + error});
+
+    response.json({message: 'User successfully deleted'});
+  }).select('-__v');
+};
 
 module.exports = {
   getAll: getAll,
   createUser: createUser,
   getUser: getUser,
-  updateUser: updateUser
+  updateUser: updateUser,
+  removeUser: removeUser
 };

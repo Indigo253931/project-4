@@ -1,15 +1,15 @@
-var Sector = require('./server/models/sector_industry');
+var Sector = require('../models/sector_industry');
 
 // Get all sectors
-function getAll(request, response) {
+var getAll = function (request, response) {
   Sector.find(function(error, sectors) {
     if(error) response.json({message: 'Could not find any sectors'});
     response.json({sectors: sectors});
   });
-}
+};
 
 // Get one sector
-function getSector(request, response) {
+var getSector = function (request, response) {
   var id = request.params.id;
 
   Sector.findById({_id: id}, function(error, sector) {
@@ -17,7 +17,7 @@ function getSector(request, response) {
 
     response.json({sector: sector});
   }).select('-__v');
-}
+};
 
 module.exports = {
   getAll: getAll,

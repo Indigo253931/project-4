@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // Body parser config to accept datatypes
 app.use(bodyParser.urlencoded({ extended: true }));
 // Require and use routes
-var routes = require('./server/routes');
+var routes = require('./server/routes/routes.js');
 app.use(routes);
 
 /************
