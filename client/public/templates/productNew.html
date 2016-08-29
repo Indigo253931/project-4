@@ -4,28 +4,28 @@
     <a href='productIndex.html'>All Products</a>
 </nav>
 <!-- Register a controller for section of application. -->
-			<form id='product-form' ng-controller="ProductNewController as productCtrl" ng-submit="submit()">
+			<form id='product-form' ng-controller="ProductsController as newProduct" ng-submit="submit()">
 				<!-- Name input -->
 				<table style='width:100%''>
 					<div class='form labels'>
-						<label for="newProduct-name">Product:</label>
+						<label for="newProduct-product_name">Product:</label>
 						<!-- Bind HTML element's value to model. -->
-						<input id='form-label-name' type="text" id="newProduct-name" ng-model="newProduct.product_name" placeholder=''>
+						<input id='form-label-name' type="text" id="newProduct-product_name" ng-model="Product.product_name" placeholder=''>
 					</div></tr>
 					<!-- Company -->
 					<tr><div class='form labels'>
-						<label for="newProduct-company">Company:</label>
-						<input type="text" id="newProduct-company" ng-model="newProduct.company" placeholder=''>
+						<label for="newProduct-company_name">Company:</label>
+						<input type="text" id="newProduct-company_name" ng-model="Product.company_name" placeholder=''>
 					</div></tr>
 					<!-- Comments -->
 					<tr><div class='form labels'>
 						<label for="newProduct-comments">Comments:</label>
-						<input type="text" id="newProduct-comments" ng-model="newProduct.comments" placeholder=''>
+						<input type="text" id="newProduct-comments" ng-model="Product.comments" placeholder=''>
 					</div></tr>
 					<!-- Image -->
 					<tr><div class='form labels'>
 						<label for="newProduct-image">Image:</label>
-						<input type="text" id="newProduct-image" ng-model="newProduct.image" placeholder=''>
+						<input type="text" id="newProduct-image" ng-model="Product.image" placeholder=''>
 					</div></tr>
 					<!-- Submit form -->
 					<div>

@@ -7,7 +7,7 @@
 	<section class='container'> 
 			<div class='signup_form'>
 			<!-- Register a controller for signup page-->
-			<form id='signup-form' ng-controller="SignupController as signupCtrl" ng-submit="submit()">
+			<form id='signup-form' ng-controller="UserController as signup" ng-submit="submit()">
 				<!-- Username -->
 				<table style='width:100%''>
 					<div class='form labels'>
@@ -18,7 +18,7 @@
 					<!-- Email -->
 					<tr><div class='form labels'>
 						<label for="User-email">Email: {{ user.email }}</label>
-						<input type="text" id="User-email" ng-model="User-email.email" placeholder='youremail@email.com'>
+						<input type="text" id="User-email" ng-model="User.email" placeholder='youremail@email.com'>
 					</div></tr>
 					<!-- Password -->
 					<tr><div class='form labels'>
@@ -33,11 +33,11 @@
 					<!-- Avatar -->
 					<tr><div class='form labels'>
 						<label for="User-avatar">Avatar: {{ user.avatar }}</label>
-						<input type="text" id="User-avatar" ng-model="User-avatar.avatar" placeholder='IMG URL'>
+						<input type="text" id="User-avatar" ng-model="User.avatar" placeholder='IMG URL'>
 					</div></tr>
 					<!-- Signup -->
 					<div>
-							<input type='submit' value='Sign Up!'>
+						<input type='submit' value='Sign Up!'>
 					</div>
 				</table>
 			</form>
