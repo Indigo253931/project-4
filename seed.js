@@ -4,30 +4,30 @@
  var db = require('./server/models');
 
 // Seed Data
-var products= [
+var all_products= [
 {
-		'sector': 'Construction',
-		'industry': 'Building Materials & Equipment',
-		'company_name': 'American limetechnology',
-		'product_name': 'Breathe Natual Fibre Insulation',
-		'comments': ['Insulation product made from premium grade hemp and flax fibrewhich create a naturally efficient thermal and acoustic insulation product for walls, floors and roofs.'],
-		'image': 'http://americanlimetechnology.com/wp-content/uploads/2012/01/Breathe-logo-100x240.png',
+		sector: 'Construction',
+		industry: 'Building Materials & Equipment',
+		company_name: 'American limetechnology',
+		product_name: 'Breathe Natual Fibre Insulation',
+		comments: ['Insulation product made from premium grade hemp and flax fibrewhich create a naturally efficient thermal and acoustic insulation product for walls, floors and roofs.'],
+		image: 'http://americanlimetechnology.com/wp-content/uploads/2012/01/Breathe-logo-100x240.png'
 	
 	},
 {
-		'sector': 'Misc',
-		'industry': ['Food & Beverage'],
-		'company_name': 'Dr. Bronners',
-		'product_name': 'Whole Kernel Virgin Coconut Oil',
-		'comments': ['Certified Fair Trade by IMO', 'Certified Kosher by OK Kosher', 
+		sector: 'Misc',
+		industry: ['Food & Beverage'],
+		company_name: 'Dr. Bronners',
+		product_name: 'Whole Kernel Virgin Coconut Oil',
+		comments: ['Certified Fair Trade by IMO', 'Certified Kosher by OK Kosher', 
 		'Non-GMO verified by the NON-GMO Project', 'Certified Organic by the Oregon Tilth and USDA National Organic Program', 
 		'Ceritfied vegan by Vegan Action'],
-		'image': 'https://www.drbronner.com/mm5/graphics/00000002/organic-coconutoil-whole-14oz_2.jpg'
+		image: 'https://www.drbronner.com/mm5/graphics/00000002/organic-coconutoil-whole-14oz_2.jpg'
 }
 ];
 
 
-var sectors = ([
+var all_sectors = ([
 {
 	sector: 'Agribusiness',
 	industries: ['Crop Production & Basic Processing', 'Tobacco', 'Dairy', 
@@ -66,10 +66,18 @@ var sectors = ([
 ]);
 
  db.Product.remove({}, function(err, products){
-
-   db.Product.create(products, function(err, products){
+   db.Product.create(all_products, function(err, products){
      if (err) { return console.log('ERROR', err); }
-     console.log("all product:", products);
+     console.log("all products:", all_products);
      process.exit();
+
+   });
+});
+ db.SectorIndustry.remove({}, function(err, sectors){
+   db.SectorIndustry.create(all_sectors, function(err, sectors){
+     if (err) { return console.log('ERROR', err); }
+     console.log("all sectors:", all_sectors);
+     process.exit();
+
    });
 });

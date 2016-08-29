@@ -6,6 +6,9 @@ bodyParser = require('body-parser');
 var productIndexController = require ('../scripts/productIndexController');
 var productShowController = require ('../scripts/productIndexController');
 var productNewController = require ('../scripts/productIndexController');
+var sectorIndexController = require ('../scripts/sectorIndexController');
+var sectorShowController = require ('../scripts/sectorIndexController');
+
 router.route('/products')
 
 	//GET all products
@@ -20,9 +23,19 @@ router.route('/products/:id')
 	.post(productNewController.createProduct)
 
 	// PATCH update an existing product
-	.patch(productShowController.updateProduct)
+	.patch(productUpdateController.updateProduct)
 
 	// DELETE remove a product from db
-	.delete(productsController.removeProduct);
+	.delete(productDeleteController.removeProduct);
+
+router.route('/products/sectors')
+
+	//GET all products
+	.get(sectorIndexController);
+
+router.route('/products/sectors/:id')
+
+	//GET a product
+	.get(sectorShowController);	
 
 module.exports = router;

@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 // Body parser config to accept datatypes
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 /************
  * DATABASE *
  ************/ 
@@ -51,7 +50,7 @@ app.get('/', function homepage (req,res) {
 
 //Get all products
 app.get('/api/products', function productsIndex (req, res){
-	// Find strain data from database and save it as a variable 'strains'
+	// Find product data from database and save it as a variable 'strains'
 	db.Product.find({},function(err, products){
 		if (err) { return console.log('index error: ' + err); }
 		// Send all products as JSON response
@@ -94,6 +93,25 @@ app.post('/api/products/new', function productsNew (req, res) {
 		res.json(deletedProduct);
 	});
 
+//Get all sectors
+app.get('/api/products/sectors', function sectorsIndex (req, res){
+	// Find product data from database and save it as a variable 'strains'
+	db.SectorIndustry.find({},function(err, sectors){
+		if (err) { return console.log('index error: ' + err); }
+		// Send all products as JSON response
+		res.json(sectors);
+	});
+});
+
+// Get one product
+app.get('/api/products/sectors/:id', function sectorsShow(req, res){
+		// Find one product
+	db.SectorIndustry.findOne({_id: req.params.id}, function(err, sector){
+		if (err) { return console.log('show error: ' + err); }
+		// Send one product as JSON response
+		res.json(sector);
+	});
+});
 /**********
  * SERVER *
  **********/
