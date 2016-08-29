@@ -10,7 +10,7 @@ app.use(express.static('./client/public'));
 // var mongodb = require("mongodb");
 // Require mongoose
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ecoviews');
+var db = require('./server/models');
 // Require and use Body Parser
 var bodyParser = require('body-parser');
 // Support JSON-encoded bodies
@@ -24,7 +24,7 @@ app.use(routes);
 /************
  * DATABASE *
  ************/ 
-// var db = require('./server/models');
+ var db = require('./server/models');
 
 
 ////////////////////

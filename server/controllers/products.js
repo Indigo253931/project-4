@@ -4,9 +4,11 @@ var Product = require('../models/product');
 // GET
 var getAll = function (request, response) {
   Product.find(function(error, products) {
+      console.log(products);
     if(error) response.json({message: 'Could not find any products'});
     response.json({products: products});
   });
+  console.log('done');
 };
 
 // POST

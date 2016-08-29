@@ -65,20 +65,23 @@ var all_sectors = [
 }
 ];
 
+
  db.Product.remove({}, function(err, products){
+
    db.Product.create(all_products, function(err, products){
      if (err) { return console.log('ERROR', err); }
      console.log("all products:", all_products);
-     process.exit();
 
    });
 });
- 
+
  db.SectorIndustry.remove({}, function(err, sectors){
+ // console.log(all_sectors);
    db.SectorIndustry.create(all_sectors, function(err, sectors){
-     if (err) { return console.log('ERROR', err); }
-     console.log("all sectors:", all_sectors);
-     process.exit();
 
+     if (err) { return console.log('ERROR', err); }
+     console.log("all sectors:", sectors);
    });
 });
+
+  
