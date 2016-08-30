@@ -1,4 +1,5 @@
-app.controller('ProductsController', productsController);
+app.controller('ProductsController', ProductsController);
+
 
 
 				/////////////////
@@ -8,11 +9,14 @@ app.controller('ProductsController', productsController);
 	ProductsController.$inject = ['$scope', '$http', '$routeParams'];
 
 
+	function ProductsController($scope, $http, $routeParams){
+
+
 	function getProducts($scope, $http){
 
 		var products = Product.get('http://localhost:3000/#/products')
 		.then(function(response){
-			$scope.products=$scope.response.products;
+			$scope.products=response.products;
 			console.log($scope.products);
 		});
 	}
@@ -21,7 +25,7 @@ app.controller('ProductsController', productsController);
 		$http
 		.get('http://localhost:3000/#/products/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.products=$scope.response.product;
+			$scope.products=response.product;
 			console.log($scope.product);
 		});
 	}
@@ -30,7 +34,7 @@ app.controller('ProductsController', productsController);
 		$http
 		.post('http://localhost:3000/#/products/', $scope.newProduct)
 		.then(function(response){
-			$scope.products=$scope.response.product;	
+			$scope.products=response.product;	
 			console.log($scope.newProduct);
 			// newProduct();
 		});
@@ -40,7 +44,7 @@ app.controller('ProductsController', productsController);
 		$http
 		.put('http://localhost:3000/#/products/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.products=$scope.response.product;	
+			$scope.products=response.product;	
 			console.log($scope.product);
 			// updateProduct();
 		});
@@ -50,8 +54,10 @@ app.controller('ProductsController', productsController);
 		$http
 		.delete('http://localhost:3000/#/products/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.products=$scope.response.product;	
+			$scope.products=response.product;	
 			console.log($scope.product);
 			// deleteProduct();
 		});
+	}
+
 	}

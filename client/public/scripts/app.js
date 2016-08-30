@@ -1,49 +1,45 @@
 // Create an Angular module
 var app = angular.module('EcoViews', ['ngRoute']);
 
+console.log('Angular is working.');
+
 app.config(function($routeProvider){
 	$routeProvider
-	.when('/', {
-		templateUrl: 'templates/home.html',
-		controller: 'mainController'
+	.when('/products', {
+		templateUrl: 'templates/productIndex.html',
+		controller: 'ProductsController'
+	})
+	.when('/products/:id', {
+		templateUrl: 'templates/productShow.html',
+		controller: 'ProductsController'
+	})
+	.when('/products/new', {
+		templateUrl: 'templates/productNew.html',
+		controller: 'ProductsController'
 	})
 	.when('/about', {
 		templateUrl: 'templates/about.html'
 	})
 	.when('/signup', {
 		templateUrl: 'templates/signup.html',
-		controller: 'UsersController'
+		controller: 'NewUserController'
 	})
 	.when('/login', {
 		templateUrl: 'templates/login.html',
-		controller: 'UsersController'
+		controller: 'LoginUserController'
 	})
 	.when('/profile', {
 		templateUrl: 'templates/profile.html',
-		controller: 'UsersController'
+		controller: 'ProfileController'
 	})
-	.when('products', {
+	.when('/sectors', {
 		templateUrl: 'templates/productIndex.html',
-		controller: 'ProductsController'
+		controller: 'SectorsIndexController'
 	})
-	.when('products/:id', {
+	.when('/sectors/:id', {
 		templateUrl: 'templates/productShow.html',
-		controller: 'ProductsController'
-	})
-	.when('products/', {
-		templateUrl: 'templates/productNew.html',
-		controller: 'ProductsController'
-	})
-	.when('sectors', {
-		templateUrl: 'templates/productIndex.html',
-		controller: 'SectorsController'
-	})
-	.when('sectors/:id', {
-		templateUrl: 'templates/productShow.html',
-		controller: 'sectorsController'
+		controller: 'SectorsShowController'
 	});
 });
-	app.controller('mainController', ['$scope', function($scope){
-	$scope.message = 'Welcome to EcoViews!';
-}]);
+
 

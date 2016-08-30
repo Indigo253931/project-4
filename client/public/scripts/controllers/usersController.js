@@ -7,11 +7,13 @@ app.controller('UsersController', UsersController);
 	UsersController.$inject = ['$scope', '$http', '$routeParams'];
 
 
+	function UsersController($scope, $http, $routeParams){
+
 	function getUsers($scope, $http){
 
 		var users = User.get('http://localhost:3000/#/users')
 		.then(function(response){
-			$scope.users=$scope.response.users;
+			$scope.users=response.users;
 			console.log($scope.users);
 		});
 	}
@@ -20,7 +22,7 @@ app.controller('UsersController', UsersController);
 		$http
 		.get('http://localhost:3000/#/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=$scope.response.user;
+			$scope.users=response.user;
 			console.log($scope.user);
 		});
 	}
@@ -29,7 +31,7 @@ app.controller('UsersController', UsersController);
 		$http
 		.post('http://localhost:3000/#/users/', $scope.newUser)
 		.then(function(response){
-			$scope.users=$scope.response.user;	
+			$scope.users=response.user;	
 			console.log($scope.newUser);
 			// newUser();
 		});
@@ -39,7 +41,7 @@ app.controller('UsersController', UsersController);
 		$http
 		.put('http://localhost:3000/#/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=$scope.response.user;	
+			$scope.users=response.user;	
 			console.log($scope.user);
 			// updateUser();
 		});
@@ -49,8 +51,10 @@ app.controller('UsersController', UsersController);
 		$http
 		.delete('http://localhost:3000/#/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=$scope.response.user;	
+			$scope.users=response.user;	
 			console.log($scope.user);
 			// deleteUser();
 		});
+	}
+
 	}
