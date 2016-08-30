@@ -1,29 +1,24 @@
 app.controller('ProductsController', ProductsController);
 
-
-
 				/////////////////
 				// CONTROLLERS //
 				/////////////////
 
-	ProductsController.$inject = ['$scope', '$http', '$routeParams'];
-
-
-	function ProductsController($scope, $http, $routeParams){
-
-
-	function getProducts($scope, $http){
-
-		var products = Product.get('http://localhost:3000/#/products')
+ProductsController.$inject = ['$scope', '$http', '$routeParams'];
+function ProductsController($scope, $http, $routeParams){
+	function getProducts(){
+		$http.get('http://localhost:3000/products')
 		.then(function(response){
-			$scope.products=response.products;
-			console.log($scope.products);
-		});
-	}
+			console.log(response);
+				$scope.products=response.data.products;
+				console.log($scope.products);
+			});
 
+	}
+	getProducts();
 	function getProduct($scope, $http, $routeParams){
 		$http
-		.get('http://localhost:3000/#/products/:id' + $routeParams.id)
+		.get('http://localhost:3000/products/:id' + $routeParams.id)
 		.then(function(response){
 			$scope.products=response.product;
 			console.log($scope.product);
@@ -32,7 +27,7 @@ app.controller('ProductsController', ProductsController);
 
 	function newProduct($scope, $http, $routeParams){
 		$http
-		.post('http://localhost:3000/#/products/', $scope.newProduct)
+		.post('http://localhost:3000/products/', $scope.newProduct)
 		.then(function(response){
 			$scope.products=response.product;	
 			console.log($scope.newProduct);
@@ -42,7 +37,7 @@ app.controller('ProductsController', ProductsController);
 
 	function updateProduct($scope, $http, $routeParams){
 		$http
-		.put('http://localhost:3000/#/products/:id' + $routeParams.id)
+		.put('http://localhost:3000/products/:id' + $routeParams.id)
 		.then(function(response){
 			$scope.products=response.product;	
 			console.log($scope.product);
@@ -52,7 +47,7 @@ app.controller('ProductsController', ProductsController);
 	
 	function deleteProduct($scope, $http, $routeParams){
 		$http
-		.delete('http://localhost:3000/#/products/:id' + $routeParams.id)
+		.delete('http://localhost:3000/products/:id' + $routeParams.id)
 		.then(function(response){
 			$scope.products=response.product;	
 			console.log($scope.product);

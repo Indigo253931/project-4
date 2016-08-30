@@ -17,28 +17,28 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/productNew.html',
 		controller: 'ProductsController'
 	})
-	.when('/about', {
-		templateUrl: 'templates/about.html'
-	})
 	.when('/signup', {
 		templateUrl: 'templates/signup.html',
-		controller: 'NewUserController'
+		controller: 'UsersController'
 	})
 	.when('/login', {
 		templateUrl: 'templates/login.html',
-		controller: 'LoginUserController'
+		controller: 'UsersController'
 	})
 	.when('/profile', {
 		templateUrl: 'templates/profile.html',
-		controller: 'ProfileController'
+		controller: 'UsersController'
 	})
 	.when('/sectors', {
 		templateUrl: 'templates/productIndex.html',
-		controller: 'SectorsIndexController'
+		controller: 'SectorsController'
 	})
 	.when('/sectors/:id', {
 		templateUrl: 'templates/productShow.html',
-		controller: 'SectorsShowController'
+		controller: 'SectorsController'
+	})
+	.when('/about', {
+		templateUrl: 'templates/about.html'
 	});
 });
 

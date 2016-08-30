@@ -1,9 +1,10 @@
 <section class='container'> 
 			<div class='signup_form'>
 			<!-- Register a controller for signup page-->
-			<form id='signup-form' ng-controller="UserController as signup" ng-submit="submit()">
+			<form id='UserSignup' ng-controller="UsersController as UserSignup" ng-submit="submit()">
 				<!-- Username -->
 				<table style='width:100%''>
+				<tr>
 					<div class='form labels'>
 						<label for="User-username">Username: {{ user.username }}</label>
 						<!-- Bind HTML element's value to model. -->
@@ -12,7 +13,7 @@
 					<!-- Email -->
 					<tr><div class='form labels'>
 						<label for="User-email">Email: {{ user.email }}</label>
-						<input type="text" id="User-email" ng-model="User.email" placeholder='youremail@email.com'>
+						<input type="text" id="User-email" ng-model="User.email" placeholder='your_email@email.com'>
 					</div></tr>
 					<!-- Password -->
 					<tr><div class='form labels'>

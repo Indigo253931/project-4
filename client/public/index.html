@@ -5,13 +5,12 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/style.css"/>
 	<!-- Initialize Angular first-->
-  <!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
-    <script src='/bower_components/angular/angular.js'></script>
-     <script src='/bower_components/angular-route/angular-route.js'></script>
+    <script src='/bower_components/angular/angular.js'></script>   
     <!-- Initialize Angular Routes -->
- <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script> -->
+     <script src='/bower_components/angular-route/angular-route.js'></script>
 	<!-- App -->
 	<script src="scripts/app.js"></script>
+	<!-- Front-end Controllers -->
 	<script src="/scripts/controllers/productsController.js"></script>
 	<script src="/scripts/controllers/sectorsController.js"></script>
 	<script src="/scripts/controllers/usersController.js"></script>
@@ -23,19 +22,20 @@
 		<div id='homepage' class="container">
 			<!-- Navbar -->
 				<nav>
-					<a href='#/signup'>Sign Up</a> or <a href='#/login.html'>Login</a>
-					<a href='#/profile'>Profile</a>
-					<a href='#/products'>All Products</a>
-					<a href='#/products/new'>Add a Product</a>		
+					<a href='/#/signup'>Sign Up</a> or 
+					<a href='/#/login.html'>Login</a>
+					<a href='/#/profile'>Profile</a>
+					<a href='/#/products'>All Products</a>
+					<a href='/#/products/new'>Add a Product</a>		
 				</nav>
 					<section id="products">
 						<div ng-view>
-					    <!-- Product info here -->
+					    
 						</div>
 					</section>
 
 			<footer>
-				<a href='#/about'>About</a>
+				<a href='/#/about'>About</a>
 			</footer>
 		</div>
 	</body>
