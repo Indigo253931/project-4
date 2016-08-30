@@ -1,5 +1,5 @@
 // Create an Angular module
-var app = angular.module('EcoViews', ['ngRoute']);
+var app = angular.module('EcoRev', ['ngRoute']);
 
 console.log('Angular is working.');
 
