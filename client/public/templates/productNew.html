@@ -1,30 +1,38 @@
 <!-- Register a controller for section of application. -->
-			<form id='product-form' ng-controller="ProductsNewController as newProduct" ng-submit="submit()">
-				<!-- Name input -->
-				<table style='width:100%''>
-					<div class='form labels'>
-						<label for="newProduct-product_name">Product:</label>
-						<!-- Bind HTML element's value to model. -->
-						<input id='form-label-name' type="text" id="newProduct-product_name" ng-model="Product.product_name" placeholder=''>
-					</div></tr>
-					<!-- Company -->
-					<tr><div class='form labels'>
-						<label for="newProduct-company_name">Company:</label>
-						<input type="text" id="newProduct-company_name" ng-model="Product.company_name" placeholder=''>
-					</div></tr>
-					<!-- Comments -->
-					<tr><div class='form labels'>
-						<label for="newProduct-comments">Comments:</label>
-						<input type="text" id="newProduct-comments" ng-model="Product.comments" placeholder=''>
-					</div></tr>
-					<!-- Image -->
-					<tr><div class='form labels'>
-						<label for="newProduct-image">Image:</label>
-						<input type="text" id="newProduct-image" ng-model="Product.image" placeholder=''>
-					</div></tr>
-					<!-- Submit form -->
-					<div>
-						<input type='submit' value='Add new product'>
-					</div>
-				</table>
-			</form>
+<form id='product-form' ng-controller="ProductsNewController as newProduct" ng-submit='createProduct()'>
+			<!-- Name input -->
+	<table style='width:100%''>
+		<tr>
+			<div class='form labels'>
+				<label for="newProduct-product_name">Product:</label>
+				<!-- Bind HTML element's value to model. -->
+					<input id='form-label-name' type="text" id="newProduct-product_name" ng-model="newProduct.product_name" placeholder=''>
+			</div>
+		</tr>
+			<!-- Company -->
+		<tr>
+			<div class='form labels'>
+				<label for="newProduct-company_name">Company:</label>
+					<input type="text" id="newProduct-company_name" ng-model="newProduct.company_name" placeholder=''>
+			</div>
+		</tr>
+			<!-- Comments -->
+		<tr>
+			<div class='form labels'>
+				<label for="newProduct-comments">Comments:</label>
+					<input type="text" id="newProduct-comments" ng-model="newProduct.comments" placeholder=''>
+			</div>
+		</tr>
+		<!-- Image -->
+		<tr>
+		<div class='form labels'>
+				<label for="newProduct-image">Image:</label>
+					<input type="text" id="newProduct-image" ng-model="newProduct.image" placeholder=''>
+		</div>
+		</tr>
+		<!-- Submit form -->
+		<div>
+			<input type='submit' value='Add new product'>
+		</div>
+	</table>
+</form>
