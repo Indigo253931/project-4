@@ -19,7 +19,7 @@ var createUser = function (request, response) {
     if(error) response.json({messsage: 'Could not create user b/c:' + error});
 
     response.json({user: user});
-  }).select('-__v');
+  });
 };
 
 // GET
@@ -30,7 +30,7 @@ var getUser = function(request, response) {
     if(error) response.json({message: 'Could not find user b/c:' + error});
 
     response.json({user: user});
-  }).select('-__v');
+  });
 };
 
 var updateUser = function(request, response) {
@@ -49,7 +49,7 @@ var updateUser = function(request, response) {
 
       response.json({message: 'User successfully updated', user: user});
     });
-  }).select('-__v');
+  });
 };
 
 var removeUser = function (request, response) {
@@ -59,7 +59,7 @@ var removeUser = function (request, response) {
     if(error) response.json({message: 'Could not delete user b/c:' + error});
 
     response.json({message: 'User successfully deleted'});
-  }).select('-__v');
+  });
 };
 
 module.exports = {

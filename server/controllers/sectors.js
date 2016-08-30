@@ -16,7 +16,7 @@ var getSector = function (request, response) {
     if(error) response.json({message: 'Could not find sector b/c:' + error});
 
     response.json({sector: sector});
-  }).select('-__v');
+  });
 };
 
 module.exports = {

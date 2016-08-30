@@ -3,11 +3,13 @@
 /////////////////
 app.controller('ProductsController', ProductsController);
 
+
+
 ProductsController.$inject = ['$scope', '$http', '$routeParams'];
 function ProductsController($scope, $http, $routeParams){
 	function getProducts(){
 		$http
-		.get('http://localhost:3000/products')
+		.get('http://localhost:3000/products/')
 		.then(function(response){
 			// console.log(response);
 			$scope.products = response.data.products;
@@ -17,13 +19,13 @@ function ProductsController($scope, $http, $routeParams){
 	getProducts();
 	function getProduct(){
 		$http
-		.get('http://localhost:3000/products/:id' + $routeParams.id)
+		.get('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.product = response.data.product;
 			console.log($scope.product);
 		});
 	}
-	// getProduct();
+	getProduct();
 	function newProduct(){
 		$http
 		.post('http://localhost:3000/products/', $scope.newProduct)
