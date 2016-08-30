@@ -1,31 +1,26 @@
+/////////////////
+// CONTROLLERS //
+/////////////////
 app.controller('SectorsController', SectorsController);
 
-
-				/////////////////
-				// CONTROLLERS //
-				/////////////////
-
-	SectorsController.$inject = ['$scope', '$http', '$routeParams'];
-
-
-	function SectorsController($scope, $http, $routeParams){
-
-	function getSectors($scope, $http){
-
-		var sectors = Sector.get('http://localhost:3000/#/sectors/')
+SectorsController.$inject = ['$scope', '$http', '$routeParams'];
+function SectorsController($scope, $http, $routeParams){
+	function getSectors(){
+		$http
+		.get('http://localhost:3000/sectors')
 		.then(function(response){
-			$scope.sectors=response.sectors;
+			$scope.sectors = response.data.sectors;
 			console.log($scope.sectors);
 		});
 	}
-
-	function getSector($scope, $http, $routeParams){
+	getSectors();
+	function getSector(){
 		$http
-		.get('http://localhost:3000/#/sectors/:id' + $routeParams.id)
+		.get('http://localhost:3000/sectors/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.sectors=response.sector;
+			$scope.sectors = response.data.sector;
 			console.log($scope.sector);
 		});
 	}
-
-	}
+	getSector();
+}

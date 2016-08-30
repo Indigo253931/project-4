@@ -1,60 +1,51 @@
+/////////////////
+// CONTROLLERS //
+/////////////////
 app.controller('UsersController', UsersController);
 
-				/////////////////
-				// CONTROLLERS //
-				/////////////////
-
-	UsersController.$inject = ['$scope', '$http', '$routeParams'];
-
-
-	function UsersController($scope, $http, $routeParams){
-
-	function getUsers($scope, $http){
-
-		var users = User.get('http://localhost:3000/#/users')
+UsersController.$inject = ['$scope', '$http', '$routeParams'];
+function UsersController($scope, $http, $routeParams){
+	function getUsers(){
+		$http
+		.get('http://localhost:3000/users')
 		.then(function(response){
-			$scope.users=response.users;
+			$scope.users=response.data.users;
 			console.log($scope.users);
 		});
 	}
-
-	function getUser($scope, $http, $routeParams){
+	function getUser(){
 		$http
-		.get('http://localhost:3000/#/users/:id' + $routeParams.id)
+		.get('http://localhost:3000/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=response.user;
+			$scope.users=response.data.user;
 			console.log($scope.user);
 		});
 	}
-
-	function newUser($scope, $http, $routeParams){
+	function newUser(){
 		$http
-		.post('http://localhost:3000/#/users/', $scope.newUser)
+		.post('http://localhost:3000/users', $scope.newUser)
 		.then(function(response){
-			$scope.users=response.user;	
+			$scope.users=response.data.user;	
 			console.log($scope.newUser);
 			// newUser();
 		});
 	}
-
-	function updateUser($scope, $http, $routeParams){
+	function updateUser(){
 		$http
-		.put('http://localhost:3000/#/users/:id' + $routeParams.id)
+		.put('http://localhost:3000/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=response.user;	
+			$scope.users=response.data.user;	
 			console.log($scope.user);
 			// updateUser();
 		});
 	}
-	
-	function deleteUser($scope, $http, $routeParams){
+	function deleteUser(){
 		$http
-		.delete('http://localhost:3000/#/users/:id' + $routeParams.id)
+		.delete('http://localhost:3000/users/:id' + $routeParams.id)
 		.then(function(response){
-			$scope.users=response.user;	
+			$scope.users=response.data.user;	
 			console.log($scope.user);
 			// deleteUser();
 		});
 	}
-
-	}
+}
