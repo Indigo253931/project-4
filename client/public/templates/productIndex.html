@@ -2,18 +2,27 @@
 	<a href='signup.html'>Sign Up</a> or <a href='login.html'>Login</a>
     <a href='profile.html'>Profile</a>
 </nav>
-	<section class='container' ng-controller='ProductsController as allProducts'>
+	<section id='products' class='container' ng-controller='ProductsController as allProducts'>
 	<!-- Repeat directive iterates over products collection to render each product--> 
-		<div ng-repeat='product in products'>
+		<div class='products_index' ng-repeat='product in products'>
 			<div>
-				<h2 class='product_name'><a href='/#/products/{{product.product_name}}'>{{product.product_name}}</a></h2>
+				<h2 class='product_name'><a href='/#/products/{{product.product_name}}'><!-- {{product.product_name}} --></a></h2>
 					<ul>
-						<li>{{product.company_name}}</li>
-						<li>{{product.sector}}</li>
-						<li>{{product.industry}}</li>
-						<li>{{product.comments}}</li>
-						<li>{{product.image}}</li>
+						<li><!-- {{product.company_name}} --></li>
+						<li><!-- {{product.sector}} --></li>
+						<li><!-- {{product.industry}} --></li>
+						<li><!-- {{product.comments}} --></li>
+						<li><a href='#' target='blank'> <!-- {{product.image}} --></a></li>
 					</ul>
+						<div class='recently_added'>
+							<h1>Recently added</h1>
+						</div>
+						<div class='most_upvotes'>
+							<h1>Most upvotes</h1>
+						</div>
+						<div class='most_downvotes'>
+							<h1>Most downvotes</h1>
+						</div>
 			</div>
 		</div>
 	</section>

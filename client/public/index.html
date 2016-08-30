@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<!-- Tell HTML to use Angular -->
 <html>
 <head>
-		<title>EcoEvolution</title>
+		<title>ENVRev</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/style.css"/>
 	<!-- Initialize Angular first-->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
+    <script src='/bower_components/angular/angular.js'></script>
+     <script src='/bower_components/angular-route/angular-route.js'></script>
     <!-- Initialize Angular Routes -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+ <!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script> -->
 	<!-- App -->
 	<script src="scripts/app.js"></script>
 </head>
-	<body ng-app='EcoViews'>
+<!-- Tell HTML to use Angular -->
+	<body ng-app='EcoViews' ng-controller ='mainController'>
 		<!-- Main div -->
 		<div id='homepage' class="container">
 			<!-- Navbar -->
@@ -22,15 +24,15 @@
 					<a href='templates/productIndex.html'>All Products</a>
 					<a href='templates/productNew.html'>Add a Product</a>		
 				</nav>
-						<section id="products">
-							<div ng-view>
-							
-							</div>
-						</section>
+					<section id="products">
+						<div ng-view>
+					    <!-- Product info here -->
+						</div>
+					</section>
 
-	<footer>
-		<a href='templates/about.html'>About</a>
-	</footer>
+			<footer>
+				<a href='templates/about.html'>About</a>
+			</footer>
 		</div>
 	</body>
 </html>

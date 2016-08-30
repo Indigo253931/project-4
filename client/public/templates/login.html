@@ -9,24 +9,30 @@
 			<form id='login-form' ng-controller="UsersController as login" ng-submit="submit()">
 				<!-- Username -->
 				<table style='width:100%''>
-					<div class='form labels'>
-						<label for="User-username">Username: {{ user.username }}</label>
-						<!-- Bind HTML element's value to model. -->
-						<input id='form-label-name' type="text" id="User-username" ng-model="User.username" placeholder='Your name here'>
-					</div></tr>
+					<tr>
+						<div class='form labels'>
+							<label for="User-username">Username: <!-- {{ user.username }} --></label>
+							<!-- Bind HTML element's value to model. -->
+							<input id='form-label-name' type="text" id="User-username" ng-model="User.username" placeholder='Your name here'>
+						</div>
+					</tr>
 					<!-- Email -->
-					<tr><div class='form labels'>
-						<label for="User-email">Email: {{ user.email }}</label>
-						<input type="text" id="User-email" ng-model="User-email.email" placeholder='youremail@email.com'>
-					</div></tr>
+					<tr>
+						<div class='form labels'>
+							<label for="User-email">Email:<!--  {{ user.email }} --></label>
+							<input type="text" id="User-email" ng-model="User-email.email" placeholder='youremail@email.com'>
+						</div>
+					</tr>
 					<!-- Password -->
-					<tr><div class='form labels'>
-						<label for="User-password">Password: {{ user.password }}</label>
-						<input type="text" id="User-password" ng-model="User.password" placeholder=''>
-					</div></tr>
+					<tr>
+						<div class='form labels'>
+							<label for="User-password">Password: <!-- {{ user.password }} --></label>
+							<input type="text" id="User-password" ng-model="User.password" placeholder=''>
+						</div>
+					</tr>
 					<!-- Login -->
 					<div>
-							<input type='submit' value='Login!'>
+						<input type='submit' value='Login!'>
 					</div>
 				</table>
 			</form>
