@@ -1,5 +1,14 @@
-	<section id='products' class='container'>
+<section id='products' class='container'>
 	<!-- Repeat directive iterates over products collection to render each product--> 
+	<div class='recently_added'>
+		<h1>Recently added</h1>
+	</div>
+	<div class='most_upvotes'>
+		<h1>Most upvotes</h1>
+	</div>
+	<div class='most_downvotes'>
+		<h1>Most downvotes</h1>
+	</div>
 		<div class='products_index' ng-repeat='product in products'>
 			<div>
 				<h2 class='product_name'><a href='/#/products/{{product._id}}'>{{product.product_name}}</a></h2>
@@ -11,15 +20,6 @@
 						<li><a href='#' target='blank'> {{product.image}}</a>
 						</li>
 					</ul>
-						<div class='recently_added'>
-							<h1>Recently added</h1>
-						</div>
-						<div class='most_upvotes'>
-							<h1>Most upvotes</h1>
-						</div>
-						<div class='most_downvotes'>
-							<h1>Most downvotes</h1>
-						</div>
 			</div>
 		</div>
-	</section>
+</section>
