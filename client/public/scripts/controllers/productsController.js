@@ -38,7 +38,7 @@ function ProductsController($scope, $http, $routeParams){
 	// newProduct();
 	function updateProduct(){
 		$http
-		.put('http://localhost:3000/products/:id' + $routeParams.id)
+		.put('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.products = response.data.product;	
 			console.log($scope.product);
@@ -48,7 +48,7 @@ function ProductsController($scope, $http, $routeParams){
 	// updateProduct();
 	function deleteProduct(){
 		$http
-		.delete('http://localhost:3000/products/:id' + $routeParams.id)
+		.delete('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.products = response.data.product;	
 			console.log($scope.product);
