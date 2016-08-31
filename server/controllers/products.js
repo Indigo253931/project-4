@@ -1,6 +1,4 @@
 var Product = require('../models/product');
-
-
 // GET
 var getAll = function (request, response) {
   Product.find(function(error, products) {
@@ -19,7 +17,7 @@ var createProduct = function (request, response) {
   console.log('in POST');
   console.log('body:',request.body);
   var product = new Product(request.body);
-  product.save(function(error) {
+  Product.save(function(error) {
     if(error) { 
       response.json({messsage: 'Could not create product b/c:' + error});
     } else {

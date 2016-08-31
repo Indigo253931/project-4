@@ -1,9 +1,9 @@
 	<!-- Create Angular views and build UI by templating directly into HTML with expressions.
 	 -->
-<section id='products' class='container' ng-controller='ProductsController'>
+<section id='products' class='container' ng-controller='ProductsController as getProduct'>
 	<div class='products_show'>
-		<h2 class='product_name'>{{ product.product_name }}</h2>
-			<h3 class='company_name'>{{ product.company_name }}</h3>
+		<h2 class='getProduct.product_name'>{{ product.product_name }}</h2>
+			<h3 class='getProduct.company_name'>{{ product.company_name }}</h3>
 				<ul>
 					<div>
 						<a href='#' target='blank'>{{product.image}}</a>

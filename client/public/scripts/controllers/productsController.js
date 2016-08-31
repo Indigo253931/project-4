@@ -2,7 +2,10 @@
 // CONTROLLERS //
 /////////////////
 app.controller('ProductsController', ProductsController)
-.controller('ProductsNewController', ProductsNewController);
+.controller('ProductsNewController', ProductsNewController)
+.controller('ProductsUpdateController', ProductsUpdateController)
+.controller('ProductsDeleteController', ProductsDeleteController);
+
 ProductsController.$inject = ['$scope', '$http', '$routeParams'];
 ProductsNewController.$inject = ['$scope', '$http', '$routeParams'];
 ProductsUpdateController.$inject = ['$scope', '$http', '$routeParams'];
@@ -19,15 +22,16 @@ function ProductsController($scope, $http, $routeParams){
 		});
 	}
 	getProducts();
-	function getProduct(){
+	$scope.getProduct = function(){
+		console.log($scope.getProduct);
 		$http
 		.get('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.product = response.data.product;
-			console.log($scope.product);
+			console.log($scope.getProduct);
 		});
-	}
-	getProduct();
+	};
+	// getProduct();
 }
 function ProductsNewController($scope, $http, $routeParams){	
 	// $scope.newProduct = newProduct;
@@ -41,29 +45,27 @@ function ProductsNewController($scope, $http, $routeParams){
 			console.log($scope.newProduct);
 		});
 	};
-
 }
 function ProductsUpdateController($scope, $http, $routeParams){
-	function updateProduct(){
+	$scope.updateProduct = function(){
 		$http
 		.put('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.products = response.data.product;	
-			console.log($scope.product);
+			console.log($scope.updateProduct);
 		});
-	}
+	};
 	// updateProduct();
 }
-
 function ProductsDeleteController($scope, $http, $routeParams){
-	function deleteProduct(){
+	$scope.deleteProduct = function (){
 		$http
 		.delete('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.products = response.data.product;	
-			console.log($scope.product);
+			console.log($scope.deleteProduct);
 			// deleteProduct();
 		});
-	}
+	};
 	// deleteProduct();
 }
