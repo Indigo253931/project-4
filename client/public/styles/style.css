@@ -95,13 +95,12 @@ img {
 	width: 250px;
 }
 
-
 a {
 	text-decoration: none;
 }
+
 a:hover {
 	color: #005C59;
     -webkit-transition: color .2s ease-out,color 1s ease-in;
     transition: color .2s ease-out, color 1s ease-in;
 }
-
