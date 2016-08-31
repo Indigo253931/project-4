@@ -1,12 +1,12 @@
 <!-- Register a controller for section of application. -->
-<form ng-submit="submit()">
+<form ng-submit="$scope.editProduct()">
 	<!-- Update Name -->
 	<table style='width:100%''>
 		<tr>
 			<div class='form labels'>
 				<label for="updateProduct-product_name">Product:</label>
 							<!-- Bind HTML element's value to model. -->
-					<input id='form-label-name' type="text" id="updateProduct-product_name" ng-model="Product.product_name" placeholder=''>
+					<input id='form-label-name' type="text" id="updateProduct-product_name" ng-model="editProduct.product_name" placeholder=''>
 			</div>
 		</tr>
 	<!-- Company -->
