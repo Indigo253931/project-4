@@ -17,6 +17,10 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/productShow.html',
 		controller: 'ProductsShowController'
 	})
+	.when('/products/:id/edit', {
+		templateUrl: 'templates/editProduct.html',
+		controller: 'ProductsUpdateController'
+	})
 	.when('/signup', {
 		templateUrl: 'templates/signup.html',
 		controller: 'UsersNewController'

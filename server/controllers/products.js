@@ -17,9 +17,9 @@ var createProduct = function (request, response) {
   console.log('in POST');
   console.log('body:',request.body);
   var product = new Product(request.body);
-  Product.save(function(error) {
+  product.save(function(error) {
     if(error) { 
-      response.json({messsage: 'Could not create product b/c:' + error});
+      response.status(400).json({messsage: 'Could not create product b/c:' + error});
     } else {
     response.json({product: product});
     }

@@ -124,6 +124,10 @@ a:hover {
     transition: color .2s ease-out, color 1s ease-in;
 }
 
-.products_index, .products_show, nav, footer{
+.products_index, .products_show, .sources, .about_summary, nav, footer{
 	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sources, .about_summary{
+	font-size: 20px;
 }
