@@ -18,40 +18,36 @@ function ProductsController($scope, $http, $routeParams){
 		$http
 		.get('http://localhost:3000/products/')
 		.then(function(response){
-			// console.log(response);
 			$scope.products = response.data.products;
 			console.log($scope.products);
 		});
 	}
 	getProducts();
-	// getProduct();
 }
 
+function ProductsNewController($scope, $http, $routeParams){	
+	console.log('ProductsNewController');
+	$scope.createProduct = function(){
+		$http
+		.post('http://localhost:3000/products/', $scope.createProduct())
+		.then(function(response){
+			$scope.products = response.data.product;	
+			console.log($scope.createProduct());
+			console.log('http://localhost:3000/products/', $scope.createProduct());
+		});
+	};
+	$scope.createProduct();
+}
 function ProductsShowController($scope, $http, $routeParams){
-	$scope.getProduct = function(){
+	console.log('ProductsShowController'  + $routeParams.id);
+	function getProduct (){
 		$http
 		.get('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
 			$scope.product = response.data.product;
-			console.log($scope.getProduct);
-			console.log('http://localhost:3000/products/' + $routeParams.id);
 		});
-	};	
-	$scope.getProduct();
-}
-
-function ProductsNewController($scope, $http, $routeParams){	
-	// $scope.newProduct = newProduct;
-	// function newProduct()
-	$scope.createProduct = function(){
-		console.log($scope.newProduct);
-		$http
-		.post('http://localhost:3000/products/', $scope.newProduct)
-		.then(function(response){
-			$scope.products = response.data.product;	
-			console.log($scope.newProduct);
-		});
-	};
+	}	
+	getProduct();
 }
 function ProductsUpdateController($scope, $http, $routeParams){
 	$scope.updateProduct = function(){
@@ -62,7 +58,7 @@ function ProductsUpdateController($scope, $http, $routeParams){
 			console.log($scope.updateProduct);
 		});
 	};
-	// updateProduct();
+	$scope.updateProduct();
 }
 function ProductsDeleteController($scope, $http, $routeParams){
 	$scope.deleteProduct = function (){
@@ -71,8 +67,7 @@ function ProductsDeleteController($scope, $http, $routeParams){
 		.then(function(response){
 			$scope.products = response.data.product;	
 			console.log($scope.deleteProduct);
-			// deleteProduct();
 		});
 	};
-	// deleteProduct();
+	$scope.deleteProduct();
 }

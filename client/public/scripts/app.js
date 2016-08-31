@@ -9,13 +9,13 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/productIndex.html',
 		controller: 'ProductsController'
 	})
-	.when('/products/:id', {
-		templateUrl: 'templates/productShow.html',
-		controller: 'ProductsShowController'
-	})
 	.when('/products/new', {
 		templateUrl: 'templates/productNew.html',
 		controller: 'ProductsNewController'
+	})
+	.when('/products/:id', {
+		templateUrl: 'templates/productShow.html',
+		controller: 'ProductsShowController'
 	})
 	.when('/signup', {
 		templateUrl: 'templates/signup.html',
