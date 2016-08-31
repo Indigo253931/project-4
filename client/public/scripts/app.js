@@ -17,7 +17,7 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/productShow.html',
 		controller: 'ProductsShowController'
 	})
-	.when('/products/:id/edit', {
+	.when('/products/edit', {
 		templateUrl: 'templates/editProduct.html',
 		controller: 'ProductsUpdateController'
 	})

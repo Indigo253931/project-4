@@ -10,7 +10,7 @@ app.controller('ProductsController', ProductsController)
 ProductsController.$inject = ['$scope', '$http', '$routeParams'];
 ProductsShowController.$inject = ['$scope', '$http', '$routeParams'];
 ProductsNewController.$inject = ['$window', '$scope', '$http', '$routeParams'];
-ProductsUpdateController.$inject = ['$scope', '$http', '$routeParams'];
+ProductsUpdateController.$inject = ['$window','$scope', '$http', '$routeParams'];
 ProductsDeleteController.$inject = ['$scope', '$http', '$routeParams'];
 
 function ProductsController($scope, $http, $routeParams){
@@ -50,16 +50,18 @@ function ProductsShowController($scope, $http, $routeParams){
 	}	
 	getProduct();
 }
-function ProductsUpdateController($scope, $http, $routeParams){
+function ProductsUpdateController($window, $scope, $http, $routeParams){
 	$scope.updateProduct = function(){
 		$http
 		.put('http://localhost:3000/products/' + $routeParams.id)
 		.then(function(response){
+			if (response.status == 200){
+				 $window.location.href = '/#/products/edit/' + response.data.product._id;
+		}
 			$scope.products = response.data.product;	
-			console.log($scope.updateProduct);
+			console.log(response);
 		});
 	};
-	$scope.updateProduct();
 }
 function ProductsDeleteController($scope, $http, $routeParams){
 	$scope.deleteProduct = function (){
