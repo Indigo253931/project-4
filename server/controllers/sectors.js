@@ -4,7 +4,7 @@ var Sector = require('../models/sector_industry');
 var getAll = function (request, response) {
   Sector.find(function(error, sectors) {
     if(error) {
-      response.json({message: 'Could not find any sectors'});
+      response.status(400).json({message: 'Could not find any sectors'});
     } else {
     response.json({sectors: sectors});
     }
@@ -17,7 +17,7 @@ var getSector = function (request, response) {
 
   Sector.findById({_id: id}, function(error, sector) {
     if(error) { 
-      response.json({message: 'Could not find sector b/c:' + error});
+      response.status(400).json({message: 'Could not find sector b/c:' + error});
     } else {
     response.json({sector: sector});
     }
