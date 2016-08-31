@@ -5,7 +5,10 @@
 
 body {
 	background-size: cover;
+	height: 100vh;
+	background-repeat: no-repeat;
 	text-align: center;
+	background-image: url('https://media.giphy.com/media/NU9hqIw9vN0fm/giphy.gif');
 }
 
 #navbar_item:last-child {
@@ -119,4 +122,8 @@ a:hover {
 	color: #005C59;
     -webkit-transition: color .2s ease-out,color 1s ease-in;
     transition: color .2s ease-out, color 1s ease-in;
+}
+
+.products_index, footer{
+	background-color: rgba(255, 255, 255, 0.5);
 }

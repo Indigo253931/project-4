@@ -9,8 +9,8 @@
 	<div class='most_downvotes'>
 		<h1>Most downvotes</h1>
 	</div> -->
-		<div class='products_index' ng-repeat='product in products'>
-			<div>
+		<div ng-repeat='product in products'>
+			<div  class='products_index'>
 				<h2 class='product_name'><a href='/#/products/{{product._id}}'>{{product.product_name}}</a></h2>
 					<ul>
 						<li>{{product.company_name}}</li>
