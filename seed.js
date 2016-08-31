@@ -1,8 +1,6 @@
 // This file allows the seeding of application with data
 // Run `node seed.js` from the root of this project folder.
-
 var db = require('./server/models');
-
 // Seed Data
 var all_products= [
 {
@@ -25,8 +23,6 @@ var all_products= [
 		image: 'https://www.drbronner.com/mm5/graphics/00000002/organic-coconutoil-whole-14oz_2.jpg'
 }
 ];
-
-
 var all_sectors = [
 {
 	sector: 'Agribusiness',
@@ -64,24 +60,15 @@ var all_sectors = [
 	'Railroads', 'Sea Transport']
 }
 ];
-
-
  db.Product.remove({}, function(err, products){
-
    db.Product.create(all_products, function(err, products){
      if (err) { return console.log('ERROR', err); }
      console.log("all products:", all_products);
-
    });
 });
-
  db.SectorIndustry.remove({}, function(err, sectors){
- // console.log(all_sectors);
    db.SectorIndustry.create(all_sectors, function(err, sectors){
-
      if (err) { return console.log('ERROR', err); }
      console.log("all sectors:", sectors);
    });
 });
-
-  
