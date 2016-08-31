@@ -19,15 +19,15 @@ app.config(function($routeProvider){
 	})
 	.when('/signup', {
 		templateUrl: 'templates/signup.html',
-		controller: 'UsersController'
+		controller: 'UsersNewController'
 	})
 	.when('/login', {
 		templateUrl: 'templates/login.html',
-		controller: 'UsersController'
+		controller: 'UsersShowController'
 	})
 	.when('/profile', {
 		templateUrl: 'templates/profile.html',
-		controller: 'UsersController'
+		controller: 'UsersUpdateController'
 	})
 	.when('/sectors', {
 		templateUrl: 'templates/productIndex.html',
@@ -35,7 +35,7 @@ app.config(function($routeProvider){
 	})
 	.when('/sectors/:id', {
 		templateUrl: 'templates/productShow.html',
-		controller: 'SectorsController'
+		controller: 'SectorsShowController'
 	})
 	.when('/about', {
 		templateUrl: 'templates/about.html'
