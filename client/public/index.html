@@ -22,11 +22,13 @@
 		<div id='homepage' class="container">
 			<!-- Navbar -->
 				<nav>
-					<a href='/#/signup'>Sign Up</a> or 
-					<a href='/#/login/'>Login</a>
-					<a href='/#/profile/'>Profile</a>
-					<a href='/#/products'>All Products</a>
-					<a href='/#/products/new'>Add a Product</a>		
+					<ul class='navbar_list'>	
+						<li id='navbar_item' class="active"><a href='/#/signup'>Sign Up</a></li>
+						<li id='navbar_item' class="active"><a href='/#/login/'>Login</a></li>
+						<li id='navbar_item' class="active"><a href='/#/profile/'>Profile</a></li>
+						<li id='navbar_item' class="active"><a href='/#/products'>All Products</a></li>
+						<li id='navbar_item' class="active"><a href='/#/products/new'>Add a Product</a></li>	
+					</ul>	
 				</nav>
 					<section id="products">
 						<div ng-view>
