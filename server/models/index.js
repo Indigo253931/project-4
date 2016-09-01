@@ -4,7 +4,7 @@ if (process.env.DB_HOST) {
 	mongoose.connect('mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST);
 } 
 else {
-	mongoose.connect('mongodb://api_products');
+	mongoose.connect('mongodb://localhost/api_products');
 }
 
 module.exports.Product = require('./product.js');
