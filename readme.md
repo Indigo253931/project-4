@@ -1,6 +1,5 @@
-Unit #4 Project: Portfolio Project
+Unit #4 Project
 
--
 
                        
                     /////////////////////////////
@@ -9,27 +8,12 @@ Unit #4 Project: Portfolio Project
 
     A user can click from a list of seeded sectors. Depending on chosen sector, user will only have ability to pick an  industry that is predefined to match the parent sector.
 
-        Once an option is chosen, a user is free to submit a form. Eventually, a user will also be able to create a sector and industry that belongs to it in order to provide a more extensive list of options for all users. This will first be verfied by app's admin before update occurs. 
-
-    EcoView is an app built for consumers to educate themselves and spread awareness throughout their communities about the origins of their purchases - certified fair-trade coffee, shampoo not tested on animals, BPA-free plastics, lead-free paint are just a few of the little actions we can take when making choices about our purchases. 
+    EcoRev is an app built for consumers to educate themselves and spread awareness throughout their communities about the origin and production process of their purchases to make more informed decisions and reduce their impact on the planet and all species. 
 
 
     ### General Approach 
 
 Three models: User, Product and SectorIndustry
-
- 
-2015 - 2016 Top Contributers
-
-Seeded data
-
-Sector: Agribusiness
-Industries: ['Crop Production & Basic Processing', 'Tobacco', Dairy', 'Poultry & Eggs', 'Livestock', 'Agricultural Services & Products',  'Food Processing & Sales', 'Forestry & Forest Products']
-
-Top Contributer: 
-
-Sector: Energy & Natural Resources
-Industries: ['Oil & Gas', 'Mining', 'Alternative Energy Production & Services', 'Electric Utilities', 'Waste Management']
 
 
 User can CRUD product data
@@ -51,12 +35,22 @@ User can CRUD product data
     For client side:
         -HTML
         -CSS
-        -Bootstrap
         -Angular
         -Bower
-        -Passport
 
     ### Unsolved problems 
+
+    -Have not completed user CRUD functionality
+
+    -Have not completed the update or delete functionality.
+
+    -Have not implemented auth.
+
+    -Have not gotten image urls to display image on the page.
+
+    -Incomplete styling
+
+    -Have not implemented data visualizations
 
     
 
@@ -127,11 +121,6 @@ https://trello.com/b/31kST3qY/project-4
     -Require models in db variable. 
     -Include seeded data array for products.
 
-    
-
-
-
-
 
 Install Bower for front-end dependencies 
     
@@ -158,33 +147,5 @@ Require Mongoose in server.js
 Install body parser and mongoose
     'npm install mongoose --save'
 
-Use directives ngApp, ngView, ngController and ngRepeat
+Use directives ngApp, ngView, ngModel,  ngController and ngRepeat
 
-
-### Technical Requirements
-
-    *Build a full-stack application
-
-    *Consume and/or serve an API
-
-    *Interactive front-end using a modern front-end framework
-
-    *Be a complete product (multiple relationships and CRUD functionality for 2+ models)
-
-    *Use a database
-
-    *Implement thoughtful user stories
-
-    *Visually impressive design
-
-    * Deploy online
-
-    * A ``readme.md`` file with:
-        * An embedded screenshot of the app
-        * Explanations of the **technologies** used
-        * A couple paragraphs about the **general approach you took**
-        * **Installation instructions** for any dependencies
-        * Link to your **user stories** – who are your users, what do they want, and why?
-        * Link to your **wireframes** – sketches of major views / interfaces in your application
-        * Link to your **pitch deck** – documentation of your wireframes, user stories, and proposed architecture
-        * Descriptions of any **unsolved problems** or **major hurdles** you had to overcome

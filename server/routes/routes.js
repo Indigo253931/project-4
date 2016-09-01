@@ -28,10 +28,10 @@ router.route('/products/:id')
 	.delete(productsController.removeProduct);
 
 router.put('/products/:id/edit', function(req, res){
-		console.log(req.body)
-		var productId = mongoose.Types.ObjectId(req.body.product_id)
+		console.log(req.body);
+		var productId = mongoose.Types.ObjectId(req.body.product_id);
 		mongoose.model('Product').findByIdAndUpdate(productId, req.body, function(err, product) {
-			console.log(err)
+			console.log(err);
 			console.log(product);
 		});
 });

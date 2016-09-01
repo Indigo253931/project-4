@@ -9,56 +9,65 @@ app.controller('UsersController', UsersController)
 
 UsersController.$inject = ['$scope', '$http', '$routeParams'];
 UsersShowController.$inject = ['$scope', '$http', '$routeParams'];
-UsersNewController.$inject = ['$scope', '$http', '$routeParams'];
-UsersUpdateController.$inject = ['$scope', '$http', '$routeParams'];
-UsersDeleteController.$inject = ['$scope', '$http', '$routeParams'];
+UsersNewController.$inject = ['$window', '$scope', '$http', '$routeParams'];
+UsersUpdateController.$inject = ['$window', '$scope', '$http', '$routeParams'];
+UsersDeleteController.$inject = ['$window', '$scope', '$http', '$routeParams'];
 
 function UsersController($scope, $http, $routeParams){
-	$scope.getUsers = function(){
+	function getUsers(){
 		$http
 		.get('http://localhost:3000/users/')
 		.then(function(response){
 			$scope.users=response.data.users;
 			console.log($scope.users);
 		});
+	}
+	getUsers();
+}
+function UsersNewController($window, $scope, $http, $routeParams){
+	console.log('UsersNewController');
+	$scope.createUser = function(){
+		$http
+		.post('http://localhost:3000/profile/', $scope.newUser)
+		.then(function(response){
+			if (response.status == 200){
+				$window.location.href = '/#/profile/' + response.data.user._id;
+			}
+			$scope.users = response.data.user;	
+			console.log(response);
+		});
 	};
 }
-
 function UsersShowController($scope, $http, $routeParams){
-	$scope.getUser =function (){
+	console.log('UsersShowController' + $routeParams.id);
+	function getUser(){
 		$http
-		.get('http://localhost:3000/users/' + $routeParams.id)
+		.get('http://localhost:3000/profile/' + $routeParams.id)
 		.then(function(response){
-			$scope.users=response.data.user;
-			console.log($scope.showUser);
+			console.log(response);
+			$scope.user = response.data.user;
 		});
-	};
+	}
+	getUser();
 }
-
-function UsersNewController($scope, $http, $routeParams){
-	$scope.createUser=function(){
-		$http
-		.post('http://localhost:3000/users/', $scope.newUser)
-		.then(function(response){
-			$scope.users=response.data.user;	
-			console.log($scope.newUser);
-			// newUser();
-		});
-	};
-}
-
-function UsersUpdateController($scope, $http, $routeParams){
-	$scope.editUser=function(){
-		$http
-		.put('http://localhost:3000/users/' + $routeParams.id)
-		.then(function(response){
-			$scope.users=response.data.user;	
-			console.log($scope.updateUser);
+function UsersUpdateController($window, $scope, $http, $routeParams){
+	$scope.updateUser = { user_id : $route.Params.id };
+	$scope.updateUser.username = '';
+	$scope.updateUser.email = '';
+	$scope.updateUser.password = '';
+	$scope.updateUser.location = '';
+	$scope.updateUser.avatar = '';
+	console.log($scope.updateUser);
+		$scope.saveUser = function() {
+			$http
+			.put('http://localhost:3000/profile/' + $routeParams.id + '/edit', $scope.updateUser. {} )
+			.then(function(response){
+			$scope.users = response.data.user;	
+			console.log(response);
 			// updateUser();
 		});
 	};
 }
-
 function UsersDeleteController($scope, $http, $routeParams){
 	$scope.destroyUser=function(){
 		$http

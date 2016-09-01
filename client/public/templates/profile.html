@@ -1,10 +1,8 @@
 <section class='container'> 
 	<div class='user_profile' ng-controller='UsersController as UserProfile'>
-		<h2 class='user_username' ng-model='User.username'>{{ user.username }}</a>
-		</h2>
+		<h2 class='user_username' ng-model='User.username'>{{ user.username }}</a></h2>
 			<div class='user_avatar' ng-model='User.avatar'>{{ user.avatar }}</div>
 			<div class='user_location' ng-model='User.location'>{{ user.location }}</div>
-			<div class='user_submissions' ng-repeat='product in products'>
-			</div>
-			</div>
+			<div class='user_submissions' ng-repeat='product in products'></div>
+	</div>
 </section>
