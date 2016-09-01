@@ -39,7 +39,7 @@ function ProductsNewController($window, $scope, $http, $routeParams){
 	};
 }
 function ProductsShowController($scope, $http, $routeParams){
-	console.log('ProductsShowController'  + $routeParams.id);
+	console.log('ProductsShowController' + $routeParams.id);
 	function getProduct (){
 		$http
 		.get('http://localhost:3000/products/' + $routeParams.id)
