@@ -60,7 +60,7 @@ function UsersUpdateController($window, $scope, $http, $routeParams){
 	console.log($scope.updateUser);
 		$scope.saveUser = function() {
 			$http
-			.put('/profile/' + $routeParams.id + '/edit', $scope.updateUser. {} )
+			.put('/profile/' + $routeParams.id + '/edit', $scope.updateUser, {} )
 			.then(function(response){
 			$scope.users = response.data.user;	
 			console.log(response);
