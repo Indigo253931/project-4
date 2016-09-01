@@ -11,8 +11,15 @@ body {
 	text-align: center;
 	background-image: url('https://media.giphy.com/media/NU9hqIw9vN0fm/giphy.gif');
 }
+form {
 
-#navbar_item:last-child {
+	opacity: .9;
+}
+#editProduct_form{
+height: 350px;
+
+}
+	#navbar_item:last-child {
 	border-right: none;
 }
  
@@ -114,7 +121,7 @@ img {
 	width: 250px;
 }
 
-a {
+a, h1 {
 	text-decoration: none;
 	color: #03465C;
 }
