@@ -3,7 +3,7 @@ Unit #4 Project
 
                        
                     /////////////////////////////
-                    //       About
+                    //       About             //
                     /////////////////////////////
 
     A user can click from a list of seeded sectors. Depending on chosen sector, user will only have ability to pick an  industry that is predefined to match the parent sector.
@@ -52,7 +52,9 @@ User can CRUD product data
 
     -Have not implemented data visualizations
 
-    
+Heroku App
+https://young-fjord-78970.herokuapp.com/
+
 
 /////////////////////////////
 //      User Stories

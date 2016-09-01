@@ -54,7 +54,7 @@ var updateProduct = function (request, response) {
   //     }
   //   });
   // });
-  console.log('hellworld');
+
 };
 var removeProduct = function (request, response) {
   var id = request.params.id;

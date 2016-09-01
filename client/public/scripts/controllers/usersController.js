@@ -16,7 +16,7 @@ UsersDeleteController.$inject = ['$window', '$scope', '$http', '$routeParams'];
 function UsersController($scope, $http, $routeParams){
 	function getUsers(){
 		$http
-		.get('http://localhost:3000/users/')
+		.get('/users/')
 		.then(function(response){
 			$scope.users=response.data.users;
 			console.log($scope.users);
@@ -28,7 +28,7 @@ function UsersNewController($window, $scope, $http, $routeParams){
 	console.log('UsersNewController');
 	$scope.createUser = function(){
 		$http
-		.post('http://localhost:3000/profile/', $scope.newUser)
+		.post('/profile/', $scope.newUser)
 		.then(function(response){
 			if (response.status == 200){
 				$window.location.href = '/#/profile/' + response.data.user._id;
@@ -42,7 +42,7 @@ function UsersShowController($scope, $http, $routeParams){
 	console.log('UsersShowController' + $routeParams.id);
 	function getUser(){
 		$http
-		.get('http://localhost:3000/profile/' + $routeParams.id)
+		.get('/profile/' + $routeParams.id)
 		.then(function(response){
 			console.log(response);
 			$scope.user = response.data.user;
@@ -60,7 +60,7 @@ function UsersUpdateController($window, $scope, $http, $routeParams){
 	console.log($scope.updateUser);
 		$scope.saveUser = function() {
 			$http
-			.put('http://localhost:3000/profile/' + $routeParams.id + '/edit', $scope.updateUser. {} )
+			.put('/profile/' + $routeParams.id + '/edit', $scope.updateUser. {} )
 			.then(function(response){
 			$scope.users = response.data.user;	
 			console.log(response);
@@ -71,7 +71,7 @@ function UsersUpdateController($window, $scope, $http, $routeParams){
 function UsersDeleteController($scope, $http, $routeParams){
 	$scope.destroyUser=function(){
 		$http
-		.delete('http://localhost:3000/users/' + $routeParams.id)
+		.delete('/users/' + $routeParams.id)
 		.then(function(response){
 			$scope.users=response.data.user;	
 			console.log($scope.deleteUser);

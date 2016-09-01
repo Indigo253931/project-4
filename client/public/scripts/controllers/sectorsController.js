@@ -10,7 +10,7 @@ SectorsShowController.$inject = ['$scope', '$http', '$routeParams'];
 function SectorsController($scope, $http, $routeParams){
 	function getSectors(){
 		$http
-		.get('http://localhost:3000/sectors/')
+		.get('/sectors/')
 		.then(function(response){
 			$scope.sectors = response.data.sectors;
 			console.log($scope.sectors);
@@ -22,7 +22,7 @@ function SectorsController($scope, $http, $routeParams){
 function SectorsShowController($scope, $http, $routeParams){
 	function getSector (){
 		$http
-		.get('http://localhost:3000/sectors/' + $routeParams.id)
+		.get('/sectors/' + $routeParams.id)
 		.then(function(response){
 			console.log(response);
 			$scope.sector = response.data.sector;
