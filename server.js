@@ -1,6 +1,7 @@
 /////////////////////////////
 //  SETUP and CONFIGURATION
 /////////////////////////////
+require('dotenv').config();
 // Require and use Express
 var express = require('express');
 // Generate a new express app and call it 'app'
@@ -22,6 +23,7 @@ app.use(routes);
  * DATABASE *
  ************/ 
  var db = require('./server/models');
+
 /**********
  * SERVER *
  **********/
