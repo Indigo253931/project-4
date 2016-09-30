@@ -1,4 +1,4 @@
-<section id='products' class='container'>
+<section class='flex_container' id='products_container'>
 	<!-- Repeat directive iterates over products collection to render each product--> 
 <!-- 	<div class='recently_added'>
 		<h1>Recently added</h1>
@@ -9,7 +9,7 @@
 	<div class='most_downvotes'>
 		<h1>Most downvotes</h1>
 	</div> -->
-		<div ng-repeat='product in products'>
+		<div ng-repeat='product in products' class='flex_item' id='allProducts'>
 			<div  class='products_index'>
 				<h2 class='product_name'><a href='/#/products/{{product._id}}'>{{product.product_name}}</a></h2>
 					<ul>

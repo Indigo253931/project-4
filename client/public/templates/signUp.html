@@ -8,21 +8,22 @@
 					<div class='form labels'>
 						<label for="User-username">Username:</label>
 						<!-- Bind HTML element's value to model. -->
-							<input type="text" class="signup_input" ng-model="newUser.username" placeholder='Your name here'>
+							<input type="text" class="signup_input" ng-model="newUser.username" placeholder='Your name here' ng-required='true' ng-minlength='2'>
+							<span class='error-message' ng-show='userForm.lName.$dirty &&userForm.lName.$error.required'>Must Enter a Username</span>
 					</div>
 				</tr>
 					<!-- Email -->
 				<tr>
 					<div class='form labels'>
 						<label for="User-email">Email:</label>
-							<input type="text" class="signup_input" ng-model="newUser.email" placeholder='your_email@email.com'>
+							<input type="text" class="signup_input" ng-model="newUser.email" placeholder='your_email@email.com' ng-required='true' ng-minlength='2'>
 					</div>
 				</tr>
 					<!-- Password -->
 				<tr>
 					<div class='form labels'>
 						<label for="User-password">Password:</label>
-							<input type="text" class="signup_input" ng-model="newUser.password" placeholder='password'>
+							<input type="text" class="signup_input" ng-model="newUser.password" placeholder='password' ng-required='true' ng-minlength='5'>
 					</div>
 				</tr>
 					<!-- Location -->

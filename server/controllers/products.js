@@ -11,6 +11,18 @@ var getAll = function (request, response) {
   });
   console.log('done');
 };
+// GET
+var getProduct = function (request, response) {
+  var id = request.params.id;
+
+  Product.findById({_id: id}, function(error, product) {
+    if(error) {
+      response.status(400).json({message: 'Could not find product b/c:' + error});
+    } else {
+      response.json({product: product});
+    }
+  });
+};
 // POST
 var createProduct = function (request, response) {
   console.log('in POST');
@@ -24,18 +36,7 @@ var createProduct = function (request, response) {
     }
   });
 };
-// GET
-var getProduct = function (request, response) {
-  var id = request.params.id;
 
-  Product.findById({_id: id}, function(error, product) {
-    if(error) {
-      response.status(400).json({message: 'Could not find product b/c:' + error});
-    } else {
-      response.json({product: product});
-    }
-  });
-};
 var updateProduct = function (request, response) {
   // var id = request.params.id;
   // Product.findById({_id: id}, function(error, product) {

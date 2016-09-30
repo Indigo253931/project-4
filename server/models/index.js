@@ -1,3 +1,6 @@
+var express = require('express');
+var router = express.Router();
+var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 // connects to db
 if (process.env.DB_HOST) {

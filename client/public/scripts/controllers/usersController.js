@@ -2,14 +2,14 @@
 // CONTROLLERS //
 /////////////////
 app.controller('UsersController', UsersController)
-.controller('UsersShowController', UsersShowController)
 .controller('UsersNewController', UsersNewController)
+.controller('UsersShowController', UsersShowController)
 .controller('UsersUpdateController', UsersUpdateController)
 .controller('UsersDeleteController', UsersDeleteController);
 
 UsersController.$inject = ['$scope', '$http', '$routeParams'];
-UsersShowController.$inject = ['$scope', '$http', '$routeParams'];
 UsersNewController.$inject = ['$window', '$scope', '$http', '$routeParams'];
+UsersShowController.$inject = ['$scope', '$http', '$routeParams'];
 UsersUpdateController.$inject = ['$window', '$scope', '$http', '$routeParams'];
 UsersDeleteController.$inject = ['$window', '$scope', '$http', '$routeParams'];
 

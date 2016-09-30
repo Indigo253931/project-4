@@ -1,8 +1,9 @@
 <!-- Create Angular views and build UI by templating directly into HTML with expressions.
 	 -->
-<section id='products' class='container' ng-controller='ProductsShowController as getProduct'>
-	<div class='products_show'>
-		<h2 class='getProduct.product_name'>{{ product.product_name }}</h2>
+
+<div ng-controller='ProductsShowController as getProduct' class='flex_container' id='productID_container'>
+	<div class='flex_item' id='productID'>
+			<h2 class='getProduct.product_name'>{{ product.product_name }}</h2>
 			<h3 class='getProduct.company_name'>{{ product.company_name }}</h3>
 				<ul>
 					<div>
@@ -15,5 +16,6 @@
 				</ul>
 			<a href='/#/products/edit/{{product._id}}'>Edit</a> 
 			<a href='/#/products/edit/{{product._id}}'>Edit</a> 
+
 	</div>
-</section>
+</div>

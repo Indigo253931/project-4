@@ -19,9 +19,9 @@
 <!-- Tell HTML to use Angular -->
 	<body ng-app='EcoRev'>
 		<!-- Main div -->
-		<div id='homepage' class="container">
+		<div class="flex_container" id='homepage_container'>
 			<!-- Navbar -->
-				<nav>
+				<nav class='flex_item' id='navbar'>
 					<ul class='navbar_list'>	
 						<li id='navbar_item' class="active"><a href='/#/signup'>Sign Up</a></li>
 						<li id='navbar_item' class="active"><a href='/#/login/'>Login</a></li>
@@ -30,12 +30,13 @@
 						<li id='navbar_item' class="active"><a href='/#/products/new'>Add a Product</a></li>	
 					</ul>	
 				</nav>
-					<section id="products">
+				<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search'>
+					<section class='flex_item' id='products'>
 						<div ng-view>
 					    
 						</div>
 					</section>
-			<footer>
+			<footer class='flex_item' id='footer'>
 				<a href='/#/about'>About</a>
 			</footer>
 		</div>

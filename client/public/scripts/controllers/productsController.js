@@ -31,7 +31,7 @@ function ProductsNewController($window, $scope, $http, $routeParams){
 		.post('/products/', $scope.newProduct)
 		.then(function(response){
 			if (response.status == 200){
-				 $window.location.href = '/#/products/' + response.data.product._id;
+				$window.location.href = '/#/products/' + response.data.product._id;
 			}
 			$scope.products = response.data.product;	
 			console.log(response);

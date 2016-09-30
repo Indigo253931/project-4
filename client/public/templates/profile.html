@@ -1,8 +1,6 @@
-<section class='container'> 
-	<div class='user_profile' ng-controller='UsersController as UserProfile'>
-		<h2 class='user_username' ng-model='User.username'></a></h2>
-			<div class='user_avatar' ng-model='User.avatar'></div>
-			<div class='user_location' ng-model='User.location'></div>
-			<div class='user_submissions' ng-repeat='product in products'></div>
-	</div>
-</section>
+<div class='flex_container' id='profile_container' ng-controller='UsersController as UserProfile'>
+	<div class='flex_item' id='username' ng-model='newUser.username'></a></div>
+	<div class='flex_item' id='avatar' ng-model='newUser.avatar'></div>
+	<div class='flex_item' id='location' ng-model='newUser.location'></div>
+	<div id='submissions' ng-repeat='product in products'></div>
+</div>

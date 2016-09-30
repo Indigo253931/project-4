@@ -1,9 +1,8 @@
-<section class='container'> 
-	<div class='login_form'>
-		<!-- Register a controller for signup page-->
-		<form id='login_form' ng-controller="UsersController as login" ng-submit="submit()">
-			<!-- Username -->
-			<table style='width:100%''>
+
+	<!-- Register a controller for signup page-->
+	<form class='flex_container' id='form_container_login' ng-controller="UsersShowController as login" ng-submit="getUser()">
+		<!-- Username -->
+		<table class='flex_item' id='login' style='width:100%'>
 				<tr>
 					<div class='form labels'>
 						<label for="User-username">Username:</label>
@@ -27,9 +26,8 @@
 				</tr>
 					<!-- Login -->
 					<div>
-						<input type='submit' value='Login!'>
+						<input type='submit' value='Login'>
 					</div>
 			</table>
 		</form>
 	</div>
-</section>
