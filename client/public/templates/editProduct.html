@@ -1,38 +1,28 @@
 <!-- Register a controller for section of application. -->
-<form ng-controller="ProductsUpdateController as newProduct" ng-submit="saveProduct()" id='editProduct_form'>
-	<!-- Update Name -->
-	<table style='width:100%'>
-		<tr>
-			<div class='form labels'>
-				<label for="updateProduct-product_name">Product:</label>
-							<!-- Bind HTML element's value to model. -->
-					<input id='form-label-name' type="text" id="updateProduct-product_name" ng-model="updateProduct.product_name" placeholder=''>
-			</div>
-		</tr>
+<form class='flexbox_container' id='flex_form' ng-controller="ProductsUpdateController as newProduct" ng-submit="saveProduct()" id='editProduct_form'>		
+	<!-- Product Name -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-product_name">Product:</label>
+			<!-- Bind HTML element's value to model. -->
+			<input class="form_input" type="text" id="updateProduct-product_name" ng-model="updateProduct.product_name" placeholder=''>
+	</div>
 	<!-- Company -->
-		<tr>
-			<div class='form labels'>
-				<label for="updateProduct-company_name">Company:</label>
-					<input type="text" id="updateProduct-company_name" ng-model="updateProduct.company_name" placeholder=''>
-			</div>
-		</tr>
-					<!-- Comments -->
-		<tr>
-			<div class='form labels'>
-				<label for="updateProduct-comments">Comments:</label>
-					<input type="text" id="updateProduct-comments" ng-model="updateProduct.comments" placeholder=''>
-			</div>
-		</tr>
-					<!-- Image -->
-		<tr>
-			<div class='form labels'>
-				<label for="updateProduct-image">Image:</label>
-					<input type="text" id="updateProduct-image" ng-model="updateProduct.image" placeholder=''>
-			</div>
-		</tr>
-					<!-- Save changes -->
-			<div>
-				<input type='submit' value='Save changes'>
-			</div>
-	</table>
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-company_name">Company:</label>
+			<input type="text" class="form_input" ng-model="updateProduct.company_name" placeholder=''>
+	</div>
+	<!-- Comments -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-comments">Comments:</label>
+			<input type="text" class="form_input" ng-model="updateProduct.comments" placeholder=''>
+	</div>
+	<!-- Image -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-image">Image:</label>
+			<input type="text" class="form_input" ng-model="updateProduct.image" placeholder='IMG URL'>
+	</div>
+	<!-- Save Updates -->
+	<div class='flexbox_item' id='button'>
+		<input type='submit' class="form_input" value='Save changes'>
+	</div>
 </form>

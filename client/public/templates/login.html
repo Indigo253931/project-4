@@ -1,35 +1,22 @@
-<section class='container'> 
-	<div class='login_form'>
-		<!-- Register a controller for signup page-->
-		<form id='login_form' ng-controller="UsersController as login" ng-submit="submit()">
-			<!-- Username -->
-			<table style='width:100%''>
-				<tr>
-					<div class='form labels'>
-						<label for="User-username">Username:</label>
-							<!-- Bind HTML element's value to model. -->
-							<input id='form-label-name' type="text" id="User-username" ng-model="User.username" placeholder='Your name here'>
-					</div>
-				</tr>
-					<!-- Email -->
-				<tr>
-					<div class='form labels'>
-						<label for="User-email">Email:</label>
-							<input type="text" id="User-email" ng-model="User.email" placeholder='youremail@email.com'>
-					</div>
-				</tr>
-					<!-- Password -->
-				<tr>
-					<div class='form labels'>
-						<label for="User-password">Password:</label>
-							<input type="text" id="User-password" ng-model="User.password" placeholder=''>
-					</div>
-				</tr>
-					<!-- Login -->
-					<div>
-						<input type='submit' value='Login!'>
-					</div>
-			</table>
-		</form>
+<!-- Register a controller for login-->
+<form ng-controller="UsersController as login" ng-submit="submit()" class='flexbox_container' id='flex_form'>		<!-- Username -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="User-username">Username:</label>
+			<!-- Bind HTML element's value to model. -->
+			<input class="form_input" type="text" id="User-username" ng-model="User.username" placeholder='Your name here'>
 	</div>
-</section>
+	<!-- Email -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="User-email">Email:</label>
+			<input type="text" class="form_input" ng-model="User.email" placeholder='youremail@email.com'>
+	</div>
+	<!-- Password -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="User-password">Password:</label>
+			<input type="text" class="form_input" ng-model="User.password" placeholder=''>
+		</div>
+	<!-- Login -->
+	<div class='flexbox_item' id='button'>
+		<input class="form_input" type='submit' value='Login!'>
+	</div>
+</form>	

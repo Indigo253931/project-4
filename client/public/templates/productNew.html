@@ -1,38 +1,28 @@
 <!-- Register a controller for section of application. -->
-<form id='new_product_form' ng-controller="ProductsNewController as newProduct" ng-submit='createProduct()'>
-			<!-- Name input -->
-	<table style='width:100%''>
-		<tr>
-			<div class='form labels'>
-				<label for="newProduct-product_name">Product:</label>
-				<!-- Bind HTML element's value to model. -->
-					<input id='form-label-name' type="text" id="newProduct-product_name" ng-model="newProduct.product_name" placeholder=''>
-			</div>
-		</tr>
-			<!-- Company -->
-		<tr>
-			<div class='form labels'>
-				<label for="newProduct-company_name">Company:</label>
-					<input type="text" id="newProduct-company_name" ng-model="newProduct.company_name" placeholder=''>
-			</div>
-		</tr>
-			<!-- Comments -->
-		<tr>
-			<div class='form labels'>
-				<label for="newProduct-comments">Comments:</label>
-					<input type="text" id="newProduct-comments" ng-model="newProduct.comments" placeholder=''>
-			</div>
-		</tr>
-		<!-- Image -->
-		<tr>
-		<div class='form labels'>
-				<label for="newProduct-image">Image:</label>
-					<input type='url'  src="img_submit.jpg" id="newProduct-image" ng-model="newProduct.image" placeholder=''>
-		</div>
-		</tr>
-		<!-- Submit form -->
-		<div>
-			<input type='submit' value='Add new product'>
-		</div>
-	</table>
+<form class='flexbox_container' id='flex_form' ng-controller="ProductsNewController as newProduct" ng-submit='createProduct()'>	
+	<!-- Product Name -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-product_name">Product:</label>
+			<!-- Bind HTML element's value to model. -->
+			<input type="text" class="form_input"  ng-model="newProduct.product_name" placeholder=''>
+	</div>
+	<!-- Company -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-company_name">Company:</label>
+			<input type="text" class="form_input"  ng-model="newProduct.company_name" placeholder=''>
+	</div>
+	<!-- Comments -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-comments">Comments:</label>
+			<input type="text" class="form_input"  ng-model="newProduct.comments" placeholder=''>
+	</div>
+	<!-- Image -->
+	<div class='flexbox_item' id='form_input'>
+		<label for="updateProduct-image">Image:</label>
+			<input type='url' src="img_submit.jpg" class="form_input"  ng-model="newProduct.image" placeholder='IMG URL'>
+	</div>
+	<!-- Submit form -->
+	<div class='flexbox_item' id='button'>
+		<input type='submit' class="form_input" value='Add new product'>
+	</div>
 </form>

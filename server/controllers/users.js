@@ -1,6 +1,6 @@
 var User = require('../models/user');
 // GET
-var getAll = function(request, response) {
+var getAllUsers = function(request, response) {
   User.find(function(error, users) {
     if(error) {
       response.status(400).json({message: 'Could not find any users'});
@@ -62,7 +62,7 @@ var removeUser = function (request, response) {
   });
 };
 module.exports = {
-  getAll: getAll,
+  getAllUsers: getAllUsers,
   createUser: createUser,
   getUser: getUser,
   updateUser: updateUser,

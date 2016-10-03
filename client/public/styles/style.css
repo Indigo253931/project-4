@@ -1,141 +1,201 @@
+/* FORMATTING */
+
+/* FLEXBOX CONTAINER */
+.flexbox_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+/* FLEXBOX ITEM */
+.flexbox_item{
+	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	 align-items: center;
+    align-content: center;
+    align-self: center;
+ }
+/* ID CONTAINER */
+
+/* 	Navbar */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#button {
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ID ITEM  */
+
+
+/* GLOBAL STYLES*/
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Palatino';
 }
-
 body {
+	height: 100%;
+	width: 100%;
 	background-size: cover;
-	height: 100vh;
-	background-repeat: no-repeat;
-	text-align: center;
-	background-image: url('https://media.giphy.com/media/NU9hqIw9vN0fm/giphy.gif');
+	background-repeat: no-repeat;/*
+	background-image: url(' http://hd.wallpaperswide.com/thumbs/abstract_graphic_art__blue_v-t2.jpg');
+*/}
+/* Flexbox */
+.flexbox_container {
+    height: 100%;
+    width: 100%;
 }
-form {
-
-	opacity: .9;
+.flexbox_item {
+	margin: 4px;
+    color: #343534;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: -1px 0px 6px 0px grey;
 }
-#editProduct_form{
-height: 350px;
-
+/* 	Navigation */
+#navbar {
+  height: 120px;
+  width: 100%;
+  background: #f2f2f2;
+  background-size: cover;
 }
-	#navbar_item:last-child {
-	border-right: none;
+#navitem:hover {
+  opacity: 1;
+  transition: 1s;
 }
- 
+#navitem {
+  line-height: normal;
+  height: 90px;
+  width: 100px;
+  opacity: .6;
+  background: transparent;
+  box-shadow: none;
+}
 #navbar_item a, footer a {
 	text-decoration: none;
   	color: #132531;
-  	font: 20px/1 'Palatino';
-  	text-transform: uppercase;
-  	-webkit-transition: all 0.5s ease;
-  	-moz-transition: all 0.5s ease;
-  	-o-transition: all 0.5s ease;
-  	-ms-transition: all 0.5s ease;
+  	font: 30px;
   	transition: all 0.5s ease;
 }
- 
-#navbar_item, footer a:hover {
-	color: #666;
+.navicon {
+  height: 80px;
+  width: 80px;
 }
- 
-#navbar_item.active, footer a {
-	color: #03465C;
-}
-
-#navbar_item {
-	height: 25px;
- 	float: left;
-	margin-right: 0px;
-	border-right: 1px solid #03465C;
-	padding: 0 20px;
-}
-
-ul, li, .navbar_list {
-	list-style: none;
-}
-
-nav, footer {
+/* 	Footer */
+footer {
 	height: 18px;
 	border-radius: 5px;
 	padding: 12px;
 	margin: 50px;
-}
-
-footer {
 	position: fixed;  
 	bottom: 0px;
 }
-
+/* Forms */
 form {
-	width: 285px;
-	height: 425px;
-	position: absolute;
-	top: 35%;
-	margin-top: -87.5px;
-	left: 50%;
-	margin-left: -142.5px; 
 	padding: 10px;
-	background: rgba(70,137,189,1);
-	background: -moz-linear-gradient(top, rgba(70,137,189,1) 0%, rgba(70,137,189,1) 0%, rgba(199,228,237,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(70,137,189,1)), color-stop(0%, rgba(70,137,189,1)), color-stop(100%, rgba(199,228,237,1)));
-	background: -webkit-linear-gradient(top, rgba(70,137,189,1) 0%, rgba(70,137,189,1) 0%, rgba(199,228,237,1) 100%);
-	background: -o-linear-gradient(top, rgba(70,137,189,1) 0%, rgba(70,137,189,1) 0%, rgba(199,228,237,1) 100%);
-	background: -ms-linear-gradient(top, rgba(70,137,189,1) 0%, rgba(70,137,189,1) 0%, rgba(199,228,237,1) 100%);
-	background: linear-gradient(to bottom, rgba(70,137,189,1) 0%, rgba(70,137,189,1) 0%, rgba(199,228,237,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4689bd', endColorstr='#c7e4ed', GradientType=0 );
-	border: 1px solid #1a3343;
-	border-radius: 8px;
-	font-size: 20px;
-}
-
-#new_product_form {
-	height: 360px;
-}
-
-#login_form {
-	height: 280px;
+	background: #8199B5;
+	border: 1px solid black;
+	font-size: 35px;
 }
 input {
-	display: block;
-	margin-top: 15px;
 	border-radius: 4px;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 0 #646988;
-	font: 16px/20px 'Arial', sans-serif;
+	font: 30px;
 	margin: 10px 0 15px 15px;
 	padding: 4px;
-	width: 240px;
-	background: rgba(212,228,239,1);
-	background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 35%, rgba(134,174,204,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(35%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
-	background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 35%, rgba(134,174,204,1) 100%);
-	background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 35%, rgba(134,174,204,1) 100%);
-	background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 35%, rgba(134,174,204,1) 100%);
-	background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 35%, rgba(134,174,204,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
 }
-
-
+/* IMAGES */
 img {
 	height: 200px;
 	width: 250px;
 }
-
-a, h1 {
-	text-decoration: none;
-	color: #03465C;
+.overlay {
+  	/*white overlay*/
+	background-color: rgba(0, 0, 0, 0.5);
+    height: 300px;
+   	width: 300px;
 }
-
+.overlay:hover {
+  transition: ease 2s;
+  /*black overlary*/
+  background-color: rgba(255, 255, 255, 0.5);
+}
+a {
+	text-decoration: none;
+}
 a:hover {
 	color: #005C59;
     -webkit-transition: color .2s ease-out,color 1s ease-in;
     transition: color .2s ease-out, color 1s ease-in;
 }
+/* TEMPLATE STYLES */
+/* About */
+/* USER TEMPLATES */
+#flex_form {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+#form_input {
+	font-size: 30px;
+	height: 100%;
+	width: 600px;
+	background: transparent;
+	border: none;
+	line-height: 55px;
+	box-shadow: none;
+}
+.form_input {
+	text-align: center;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 30px;
+}
+#button {
+	box-shadow: none;
+  	border-radius: 8px;
+  	line-height: normal;
+  	background: transparent;
+}
+/* Sign Up */
+/* Login */
+#login_form {
+}
+/* User ID (profile) */
+/* All Users */
 
-.products_index, .products_show, .sources, .about_summary, nav, footer{
+/* PRODUCT TEMPLATES */
+.products_index, .products_show, nav, footer{
 	background-color: rgba(255, 255, 255, 0.5);
 }
-
-.sources, .about_summary{
-	font-size: 20px;
+/* All Products */
+/* Product ID */
+/* Product Index */
+/* New Product */
+#new_product_form {
 }
+/* Edit Product */
+#editProduct_form {
+}
+
+
+
+.flexbox_item, .industry {
+   text-align: center;
+}
+ 

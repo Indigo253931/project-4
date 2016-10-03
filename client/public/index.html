@@ -10,27 +10,33 @@
      <script src='/bower_components/angular-route/angular-route.js'></script>
 	<!-- App -->
 	<script src="scripts/app.js"></script>
-	<!-- Front-end Controllers -->
+	<!-- Client-side Controllers -->
 	<script src="/scripts/controllers/productsController.js"></script>
 	<script src="/scripts/controllers/sectorsController.js"></script>
 	<script src="/scripts/controllers/usersController.js"></script>
 	
 </head>
 <!-- Tell HTML to use Angular -->
-	<body ng-app='EcoRev'>
-		<!-- Main div -->
-		<div id='homepage' class="container">
-			<!-- Navbar -->
-				<nav>
-					<ul class='navbar_list'>	
-						<li id='navbar_item' class="active"><a href='/#/signup'>Sign Up</a></li>
-						<li id='navbar_item' class="active"><a href='/#/login/'>Login</a></li>
-						<li id='navbar_item' class="active"><a href='/#/profile/'>Profile</a></li>
-						<li id='navbar_item' class="active"><a href='/#/products'>All Products</a></li>
-						<li id='navbar_item' class="active"><a href='/#/products/new'>Add a Product</a></li>	
-					</ul>	
-				</nav>
-					<section id="products">
+<body ng-app='EcoRev'>
+	<div class='flexbox_container' id='navbar'>
+	    <div class='flexbox_item' id='navitem'>
+	    	<a href='/#/signup'><img src='http://anzccj.wildapricot.org/resources/Pictures/signup_icon.png' class='navicon'/>Sign Up</a>
+	    </div>
+	    <div class='flexbox_item' id='navitem'>
+			<a href='/#/login/'><img src='https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/login.png' class='navicon'/>Login</a>
+		</div>
+		<!-- <div class='flexbox_item' id='navitem'> -->		    <!-- Only show if logged in -->
+			<!-- <a href='/#/profile/'>Profile</a>
+		</div> -->
+		<div class='flexbox_container' id='navitem'>
+			<a href='/#/products'><img src='http://image.flaticon.com/icons/svg/130/130552.svg' class='navicon'/>Browse Products</a>
+		</div>
+		<div class='flexbox_container' id='navitem'>
+			<a href='/#/products/new'><img src='
+			http://image.flaticon.com/icons/svg/130/130470.svg' class='navicon'/>Add a Product</a>
+		</div>
+    </div>
+			<section>
 						<div ng-view>
 					    
 						</div>
@@ -38,6 +44,5 @@
 			<footer>
 				<a href='/#/about'>About</a>
 			</footer>
-		</div>
 	</body>
 </html>

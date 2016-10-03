@@ -1,8 +1,9 @@
-<section class='container'> 
-	<div class='user_profile' ng-controller='UsersController as UserProfile'>
-		<h2 class='user_username' ng-model='User.username'></a></h2>
-			<div class='user_avatar' ng-model='User.avatar'></div>
-			<div class='user_location' ng-model='User.location'></div>
-			<div class='user_submissions' ng-repeat='product in products'></div>
+<section id='user' class='fbox-container' ng-controller='UsersShowController as getUser'>
+	<div>
+		<h2 class='getUser.username'>{{ user.username }}</h2>
+			<h3 class='getUser.avatar'><img src='{{user.avatar}}'></h3>
+				<h4 ng-model='getUser.location'>{{ user.location }}</h4>
+				</ul>
+			<a href='/#/users/edit/{{user._id}}'>Edit</a> 
 	</div>
 </section>

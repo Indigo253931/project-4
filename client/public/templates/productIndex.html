@@ -1,5 +1,25 @@
-<section id='products' class='container'>
+<section class='fbox-container'>
 	<!-- Repeat directive iterates over products collection to render each product--> 
+	<input type='text' class='fbox-item' id='myInput' onkeyup='myFunction()' placeholder='Search for products...'>
+		<div ng-repeat='product in products'>
+			<table id='industryTable'>
+				<tr class='header'>
+					<th class='fbox-item'>
+					<a href='/#/products/{{product._id}}'>{{product.product_name}}</a></th>
+					<th class='fbox-item'>{{product.company_name}}</th>
+					<th class='fbox-item'>{{product.sector}}</th>
+					<th class='fbox-item'>{{product.industry}}</th>
+					<th class='fbox-item'>{{product.comments}}</th>
+					<th class='fbox-item'><img src='{{product.image}}'></th>
+				</tr>
+			</table>
+		</div>
+</section>
+
+
+
+
+
 <!-- 	<div class='recently_added'>
 		<h1>Recently added</h1>
 	</div>
@@ -9,17 +29,3 @@
 	<div class='most_downvotes'>
 		<h1>Most downvotes</h1>
 	</div> -->
-		<div ng-repeat='product in products'>
-			<div  class='products_index'>
-				<h2 class='product_name'><a href='/#/products/{{product._id}}'>{{product.product_name}}</a></h2>
-					<ul>
-						<h3>{{product.company_name}}</h3>
-						<h4>{{product.sector}}</h4>
-						<h5>{{product.industry}}</h5>
-						<li>{{product.comments}}</li>
-						<li><img src='{{product.image}}'>
-						</li>
-					</ul>
-			</div>
-		</div>
-</section>

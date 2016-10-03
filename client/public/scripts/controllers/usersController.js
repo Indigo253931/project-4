@@ -24,14 +24,15 @@ function UsersController($scope, $http, $routeParams){
 	}
 	getUsers();
 }
+
 function UsersNewController($window, $scope, $http, $routeParams){
 	console.log('UsersNewController');
 	$scope.createUser = function(){
 		$http
-		.post('/profile/', $scope.newUser)
+		.post('/users/', $scope.newUser)
 		.then(function(response){
 			if (response.status == 200){
-				$window.location.href = '/#/profile/' + response.data.user._id;
+				$window.location.href = '/#/users/' + response.data.user._id;
 			}
 			$scope.users = response.data.user;	
 			console.log(response);
@@ -42,7 +43,7 @@ function UsersShowController($scope, $http, $routeParams){
 	console.log('UsersShowController' + $routeParams.id);
 	function getUser(){
 		$http
-		.get('/profile/' + $routeParams.id)
+		.get('/users/' + $routeParams.id)
 		.then(function(response){
 			console.log(response);
 			$scope.user = response.data.user;
@@ -60,7 +61,7 @@ function UsersUpdateController($window, $scope, $http, $routeParams){
 	console.log($scope.updateUser);
 		$scope.saveUser = function() {
 			$http
-			.put('/profile/' + $routeParams.id + '/edit', $scope.updateUser, {} )
+			.put('/users/' + $routeParams.id + '/edit', $scope.updateUser, {} )
 			.then(function(response){
 			$scope.users = response.data.user;	
 			console.log(response);

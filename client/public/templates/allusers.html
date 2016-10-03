@@ -1,0 +1,14 @@
+<section>
+	<!-- Repeat directive iterates over products collection to render each product--> 
+	<input type='text' id='myInput' onkeyup='myFunction()' placeholder='Search for users...'>
+		<div ng-repeat='user in users'>
+			<table id='usersTable'>
+				<tr class='header'>
+					<th>
+					<a href='/#/users/{{user._id}}'>{{user.username}}</a></th>
+					<th>{{user.}}</th>
+					<th><img src='{{user.avatar}}'></th>
+				</tr>
+			</table>
+		</div>
+</section>
