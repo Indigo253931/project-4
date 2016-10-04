@@ -1,17 +1,15 @@
 Unit #4 Project
 
+    About 
 
-                       
-                    /////////////////////////////
-                    //       About             //
-                    /////////////////////////////
+    How do the actions we take as individuals, and as the human race entirely, impact our health, other species, and the Earth?
 
-    A user can click from a list of seeded sectors. Depending on chosen sector, user will only have ability to pick an  industry that is predefined to match the parent sector.
+    GlobalRev seeks to answer these questions by constructing a platform for both obtaining information, spreading awareness and contributing your own ideas on how to actively take on these problems. 
 
-    EcoRev is an app built for consumers to educate themselves and spread awareness throughout their communities about the origin and production process of their purchases to make more informed decisions and reduce their impact on the planet and all species. 
+    Whether through a product reccomendation or sharing data that increases transparency surrounding a crisis, the only limitation we have in ending the destruction that our planet faces is within our own failure to unite, take action and make positive changes for all.
 
 
-    ### General Approach 
+### General Approach 
 
 Three models: User, Product and SectorIndustry
 
@@ -40,17 +38,7 @@ User can CRUD product data
 
     ### Unsolved problems 
 
-    -Have not completed user CRUD functionality
-
-    -Have not completed the update or delete functionality.
-
-    -Have not implemented auth.
-
-    -Have not gotten image urls to display image on the page.
-
-    -Incomplete styling
-
-    -Have not implemented data visualizations
+ 
 
 Heroku App
 https://young-fjord-78970.herokuapp.com/
